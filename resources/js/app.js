@@ -3,10 +3,36 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import Vue from 'vue';
+Vue.use(VueRouter);
+import VueRouter from 'vue-router';
+window.Vue = require('vue');
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+import { OverlayScrollbarsPlugin } from 'overlayscrollbars-vue';
+Vue.use(OverlayScrollbarsPlugin);
+
+import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue';
+
+import VueProgressBar from 'vue-progressbar';
+const options = {
+    color: '#bffaf3',
+    failedColor: '#874b4b',
+    thickness: '5px',
+    transition: {
+      speed: '0.2s',
+      opacity: '0.6s',
+      termination: 300
+    },
+    autoRevert: true,
+    location: 'left',
+    inverse: false
+  }
+
+  Vue.use(VueProgressBar, options);
+
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -18,15 +44,29 @@ window.Vue = require('vue');
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+const routes = [
+{path:'/home', component:require('./components/Dashboard.vue').default},
+{path:'/example', component:require('./components/ExampleComponent.vue').default}
+// Vue.component('user-dashboard', require('./components/dashboard.vue').default)
+]
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('overlay-scrollbars', OverlayScrollbarsComponent).default;
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+const router = new VueRouter({
+    mode: 'history',
+    routes, // short for `routes: routes`
+    linkActiveClass: 'active'
+  });
 
 const app = new Vue({
     el: '#app',
+    // render: h => h(app),
+    router
 });
+
+

@@ -27,6 +27,7 @@
         "@fortawesome/fontawesome-free": "^5.12.0",
         "admin-lte": "^3.0.2",
         "moment": "^2.24.0",
+        "overlayscrollbars-vue": "^0.2.1",
         "sweetalert2": "^8.19.0",
         "tempusdominus-bootstrap-4": "^5.1.2",
         "toastr": "^2.1.4",

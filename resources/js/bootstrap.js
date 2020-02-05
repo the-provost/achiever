@@ -11,6 +11,9 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    require('admin-lte');
+    require('overlayscrollbars-vue');
+
 } catch (e) {}
 
 /**
