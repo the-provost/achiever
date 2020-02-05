@@ -46,7 +46,14 @@ const options = {
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 const routes = [
 {path:'/home', component:require('./components/Dashboard.vue').default},
-{path:'/example', component:require('./components/ExampleComponent.vue').default}
+{path:'/vision', component:require('./components/Vision.vue').default},
+{path:'/calendar', component:require('./components/Calendar.vue').default},
+{path:'/listgoals', component:require('./components/ListGoals.vue').default},
+{path:'/statusboard', component:require('./components/KanbanPlanner.vue').default},
+{path:'/longtermgoals', component:require('./components/LongTermGoals.vue').default},
+{path:'/shorttermgoals', component:require('./components/ShortTermGoals.vue').default},
+{path:'/myjourney', component:require('./components/AchievedGoals.vue').default},
+{path:'/', component:require('./components/ExampleComponent.vue').default}
 // Vue.component('user-dashboard', require('./components/dashboard.vue').default)
 ]
 

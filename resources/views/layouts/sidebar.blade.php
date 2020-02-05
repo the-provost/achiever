@@ -16,22 +16,22 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="/home" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
                 <i class="right fas fa-th"></i>
               </p>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <router-link to="/vision" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Widgets
+                Vision
                 <span class="right badge badge-danger">New</span>
               </p>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -44,56 +44,56 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../layout/top-nav.html" class="nav-link">
+                <router-link to="/listgoals" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
+                  <p>'The List'</p>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a href="../layout/boxed.html" class="nav-link">
+                <router-link to="/statusboard" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p></p>
-                </a>
+                  <p>Planner-Tracker</p>
+                </router-link>
               </li>
-              <li class="nav-item">
-                <a href="../layout/collapsed-sidebar.html" class="nav-link">
+              {{-- <li class="nav-item">
+                <router-link to="/home" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Collapsed Sidebar</p>
-                </a>
-              </li>
+                </router-link>
+              </li> --}}
             </ul>
           </li>
 
-          <li class="nav-header">EXAMPLES</li>
+          <li class="nav-header">SCHEDULES</li>
           <li class="nav-item">
-            <a href="../calendar.html" class="nav-link">
+            <router-link to="/calendar" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Calendar
                 <span class="badge badge-info right">2</span>
               </p>
-            </a>
+            </router-link>
           </li>
 
 
           <li class="nav-header">QUICK LINKS</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="/shorttermgoals" class="nav-link">
               <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Important</p>
-            </a>
+              <p class="text">Short Term Goals</p>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="/longtermgoals" class="nav-link">
               <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Warning</p>
-            </a>
+              <p>Long Term Goals</p>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="/myjourney" class="nav-link">
               <i class="nav-icon far fa-circle text-info"></i>
-              <p>Informational</p>
-            </a>
+              <p>Journey so far</p>
+            </router-link>
           </li>
         </ul>
       </nav>
