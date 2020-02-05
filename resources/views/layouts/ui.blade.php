@@ -185,7 +185,6 @@
     </a>
 
 <!-- Sidebar -->
-
   @include( 'layouts.sidebar' )
 <!-- /.sidebar -->
 
