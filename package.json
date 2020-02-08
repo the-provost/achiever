@@ -24,7 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.12.0",
+        "@fortawesome/fontawesome-free": "^5.12.1",
         "admin-lte": "^3.0.2",
         "moment": "^2.24.0",
         "overlayscrollbars-vue": "^0.2.1",
@@ -33,6 +33,7 @@
         "toastr": "^2.1.4",
         "vform": "^1.0.1",
         "vue-excel-export": "^0.1.3",
+        "vue-kanban": "git+https://github.com/greymore-tech/vue-kanban4achiever.git",
         "vue-kanban4achiever": "git+https://github.com/greymore-tech/vue-kanban4achiever.git",
         "vue-pdf": "^4.0.7",
         "vue-progressbar": "^0.7.5",

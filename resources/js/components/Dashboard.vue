@@ -12,7 +12,7 @@
                     <div class="card-header">Dashboard</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        Body Content - Adding dashboard widgets here.
                     </div>
                 </div>
             </div>
