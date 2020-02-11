@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/css/app.css">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed layout-footer-fixed layout-navbar-fixed sidebar-collapse">
+<body class="hold-transition sidebar-mini layout-fixed layout-footer-fixed layout-navbar-fixed">
 <!-- Site wrapper -->
 <div class="wrapper" id="app">
 
@@ -20,7 +20,7 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-indigo elevation-4 ">
+  <aside class="main-sidebar sidebar-dark-indigo elevation-4 sidebar-no-expand">
     <!-- Brand Logo -->
     <a href="/home" class="brand-link bg-white">
       <img src="img/achieverlogo.svg"
@@ -35,35 +35,18 @@
 <!-- /.sidebar -->
 
 </aside>
+
   <!-- Content Wrapper. Contains page content -->
 <vue-progress-bar>
     {{-- vue progress bar --}}
 </vue-progress-bar>
 
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Dashboard</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/home">Home</a></li>
-              <li class="breadcrumb-item active">Blank Page</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
 
-    <router-view>
+<router-view>
         {{-- vue components here --}}
-    </router-view>
+</router-view>
 
-</div>
-  <!-- /.content-wrapper -->
+
 
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">

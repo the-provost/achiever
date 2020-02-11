@@ -12,7 +12,7 @@ try {
 
     require('bootstrap');
     require('admin-lte');
-    require('overlayscrollbars-vue');
+    // require('overlayscrollbars-vue');
 
 } catch (e) {}
 

@@ -8,7 +8,7 @@
         <a href="/home" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="https://github.com/the-provost/achiever" class="nav-link">Contribute Code</a>
+        <a href="https://github.com/the-provost/achiever" target="_blank" class="nav-link">Contribute Code</a>
       </li>
     </ul>
 

@@ -52696,3 +52696,7 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
+.card {
+  border: none !important;
+}
+

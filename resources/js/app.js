@@ -10,10 +10,10 @@ window.Vue = require('vue');
 
 require('./bootstrap');
 
-import { OverlayScrollbarsPlugin } from 'overlayscrollbars-vue';
-Vue.use(OverlayScrollbarsPlugin);
+// import { OverlayScrollbarsPlugin } from 'overlayscrollbars-vue';
+// Vue.use(OverlayScrollbarsPlugin);
 
-import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue';
+// import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue';
 
 import VueProgressBar from 'vue-progressbar';
 const options = {
@@ -45,19 +45,19 @@ const options = {
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 const routes = [
-{path:'/home', component:require('./components/Dashboard.vue').default},
-{path:'/vision', component:require('./components/Vision.vue').default},
-{path:'/calendar', component:require('./components/Calendar.vue').default},
-{path:'/listgoals', component:require('./components/ListGoals.vue').default},
-{path:'/statusboard', component:require('./components/KanbanPlanner.vue').default},
-{path:'/longtermgoals', component:require('./components/LongTermGoals.vue').default},
-{path:'/shorttermgoals', component:require('./components/ShortTermGoals.vue').default},
-{path:'/myjourney', component:require('./components/AchievedGoals.vue').default},
+{path:'/home', meta:{ title: 'Dashboard'}, component:require('./components/Dashboard.vue').default},
+{path:'/vision', meta:{ title: 'Vision Board'}, component:require('./components/Vision.vue').default},
+{path:'/calendar', meta:{ title: 'Calendar'}, component:require('./components/Calendar.vue').default},
+{path:'/listgoals', meta:{ title: 'The List'}, component:require('./components/ListGoals.vue').default},
+{path:'/statusboard', meta:{ title: 'Planner-Tracker'}, component:require('./components/KanbanPlanner.vue').default},
+{path:'/longtermgoals', meta:{ title: 'Long-Term Goals'}, component:require('./components/LongTermGoals.vue').default},
+{path:'/shorttermgoals', meta:{ title: 'Short-Term Goals'}, component:require('./components/ShortTermGoals.vue').default},
+{path:'/myjourney', meta:{ title: 'Journey'}, component:require('./components/AchievedGoals.vue').default},
 {path:'/', component:require('./components/ExampleComponent.vue').default}
 // Vue.component('user-dashboard', require('./components/dashboard.vue').default)
 ]
 
-Vue.component('overlay-scrollbars', OverlayScrollbarsComponent).default;
+// Vue.component('overlay-scrollbars', OverlayScrollbarsComponent).default;
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
