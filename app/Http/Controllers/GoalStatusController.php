@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Goal;
+use App\GoalStatus;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Goal;
 
-class GoalController extends Controller
+class GoalStatusController extends Controller
 {
        /**
      * Create a new controller instance.
@@ -48,24 +49,11 @@ class GoalController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
 
-            "user_id" => ["required"],
-            "term" => ["required","string"],
-            "description" => ["required","string"],
-            "title" => ["required",'string'],
-            "priority" => ["required",'numeric'],
-
-        ]);
-
-        Goal::create([
+        GoalStatus::create([
             "user_id" => $request->get('user_id'),
-            "title" => $request->get('title'),
-            "description" => $request->get('description'),
-            "planned_start" => $request->get('planned_start'),
-            "planned_end" => $request->get('planned_end'),
-            "term" => $request->get('term'),
-            "priority" => $request->get('priority')
+            "goal_id" => $request->get('goal_id'),
+            "status" => $request->get('status')
 
         ]);
     }
@@ -73,10 +61,10 @@ class GoalController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Goal  $goal
+     * @param  \App\GoalStatus  $goalStatus
      * @return \Illuminate\Http\Response
      */
-    public function show(Goal $goal)
+    public function show(GoalStatus $goalStatus)
     {
         //
     }
@@ -84,10 +72,10 @@ class GoalController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Goal  $goal
+     * @param  \App\GoalStatus  $goalStatus
      * @return \Illuminate\Http\Response
      */
-    public function edit(Goal $goal)
+    public function edit(GoalStatus $goalStatus)
     {
         //
     }
@@ -96,10 +84,10 @@ class GoalController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Goal  $goal
+     * @param  \App\GoalStatus  $goalStatus
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Goal $goal)
+    public function update(Request $request, GoalStatus $goalStatus)
     {
         //
     }
@@ -107,10 +95,10 @@ class GoalController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Goal  $goal
+     * @param  \App\GoalStatus  $goalStatus
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Goal $goal)
+    public function destroy(GoalStatus $goalStatus)
     {
         //
     }

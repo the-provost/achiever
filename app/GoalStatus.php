@@ -2,12 +2,18 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class GoalStatus extends Model
 {
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+    public function goal(){
+        return $this->belongsTo(Goal::class);
+    }
     use Notifiable;
 
     /**
@@ -16,7 +22,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name','last_name','email', 'password',
+        'user_id','goal_id','goal_title','status','percentage',
     ];
 
     /**
@@ -24,25 +30,14 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    // protected $hidden = [
+    // ];
 
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
-    public function goal()
-    {
-        return $this-> hasMany(Goal::class);
-    }
-    public function goalstatus()
-    {
-        return $this-> hasMany(GoalStatus::class);
-    }
+    // protected $casts = [
+    // ];
 }
