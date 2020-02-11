@@ -23,8 +23,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                    <div><img src="img/achieverlogo.svg" style="height:30px; " class="pr-2"></div>
+                    <div class="pt-1 pl-1">{{ config('app.name', 'Laravel') }}</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -69,7 +70,7 @@
                         @endguest
                     </ul>
                 </div>
-            </div>
+            </div{{>
         </nav>
 
         <main class="py-4">

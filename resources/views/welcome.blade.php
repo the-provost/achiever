@@ -13,6 +13,8 @@
         <style>
             html, body {
                 background-color: #fff;
+                background-image: url('img/achieverlogo.svg');
+                background-repeat: no-repeat; background-attachment: fixed;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -81,7 +83,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Achiever 👍
+                    A C H I E V E R
                 </div>
                     <h2>A goal planner for everyone.</h2>
                     <br>

@@ -6,7 +6,7 @@
           <img src="img/avatars/svg/001-man.svg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+          <a href="/home" class="d-block">{{ Auth::user()->first_name }} {{Auth::user()->last_name }}</a>
         </div>
       </div>
 
