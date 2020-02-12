@@ -13946,6 +13946,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -51419,60 +51454,184 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    {
+      staticClass: "content-wrapper pl-3 pr-3 pb-3 pt-3 mb-2",
+      staticStyle: { height: "inherit", width: "inherit" }
+    },
+    [
+      _c("section", { staticClass: "content-header" }, [
+        _c("div", { staticClass: "container-fluid" }, [
+          _c("div", { staticClass: "row mb-2" }, [
+            _c("div", { staticClass: "col-sm-6" }, [
+              _c("h1", [_vm._v(_vm._s(_vm.$route.meta.title))])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-sm-6" }, [
+              _c("ol", { staticClass: "breadcrumb float-sm-right" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("li", { staticClass: "breadcrumb-item active" }, [
+                  _vm._v(_vm._s(_vm.$route.meta.title))
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(1)
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "content-wrapper pl-3 pr-3 pb-3 pt-3 mb-2",
-        staticStyle: { height: "inherit", width: "inherit" }
-      },
-      [
-        _c("div", { staticClass: "card card-primary" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("h3", { staticClass: "card-title" }, [_vm._v("Card Tools")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-tools" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-tool",
-                  attrs: { type: "button", "data-widget": "maximize" }
-                },
-                [_c("i", { staticClass: "fas fa-expand" })]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-tool",
-                  attrs: { type: "button", "data-widget": "collapse" }
-                },
-                [_c("i", { staticClass: "fas fa-minus" })]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-tool",
-                  attrs: { type: "button", "data-widget": "remove" }
-                },
-                [_c("i", { staticClass: "fas fa-times" })]
-              )
-            ])
-          ]),
+    return _c("li", { staticClass: "breadcrumb-item" }, [
+      _c("a", { attrs: { href: "/home" } }, [_vm._v("Home")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "content" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("br"),
           _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _vm._v("\n    The body of the card\n  ")
-          ])
+          _c(
+            "div",
+            { staticClass: "row col-md-12", attrs: { align: "center" } },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-md-12 row justify-content-center center-block",
+                  attrs: { align: "center" }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "col-md-2 d-flex pt-2",
+                      staticStyle: { display: "block" }
+                    },
+                    [_c("h4", [_vm._v("PRIORITY     CHART")])]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "pbar1 col-md-1 d-flex justify-content-center pt-2 center-block",
+                      staticStyle: { display: "block" }
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "pbar2 col-md-1 d-flex justify-content-center pt-2 center-block",
+                      staticStyle: { display: "block" }
+                    },
+                    [_vm._v("2")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "pbar3 col-md-1 d-flex justify-content-center pt-2 center-block",
+                      staticStyle: { display: "block" }
+                    },
+                    [_vm._v("3")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "pbar4 col-md-1 d-flex justify-content-center pt-2 center-block",
+                      staticStyle: { display: "block" }
+                    },
+                    [_vm._v("4")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "pbar5 col-md-1 d-flex justify-content-center pt-2 center-block",
+                      staticStyle: { display: "block" }
+                    },
+                    [_vm._v("5")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "pbar6 col-md-1 d-flex justify-content-center pt-2 center-block",
+                      staticStyle: { display: "block" }
+                    },
+                    [_vm._v("6")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "pbar7 col-md-1 d-flex justify-content-center pt-2 center-block",
+                      staticStyle: { display: "block" }
+                    },
+                    [_vm._v("7")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "pbar8 col-md-1 d-flex justify-content-center pt-2 center-block",
+                      staticStyle: { display: "block" }
+                    },
+                    [_vm._v("8")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "pbar9 col-md-1 d-flex justify-content-center pt-2 center-block",
+                      staticStyle: { display: "block" }
+                    },
+                    [_vm._v("9")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "pbar10 col-md-1 d-flex justify-content-center pt-2 center-block",
+                      staticStyle: { display: "block" }
+                    },
+                    [_vm._v("10")]
+                  )
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("br")
         ])
-      ]
-    )
+      ])
+    ])
   }
 ]
 render._withStripped = true
