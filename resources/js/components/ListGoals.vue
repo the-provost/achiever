@@ -24,9 +24,13 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">{{ $route.meta.title }}</div>
+                    <div class="card-header">Let's see what's going on in that wonderfu mind of yours</div>
 
                    <div class="card-body">
+
+                       <div class="row">
+
+                       </div>
 
                         <br>
                         <h3>Coming Soon...</h3>

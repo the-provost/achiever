@@ -3,12 +3,13 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-import Vue from 'vue';
+ import Vue from 'vue';
 Vue.use(VueRouter);
 import VueRouter from 'vue-router';
 window.Vue = require('vue');
 
 require('./bootstrap');
+
 
 // import { OverlayScrollbarsPlugin } from 'overlayscrollbars-vue';
 // Vue.use(OverlayScrollbarsPlugin);
@@ -32,8 +33,12 @@ const options = {
 
 Vue.use(VueProgressBar, options);
 
-import vueKanban from 'vue-kanban4achiever';
-Vue.use(vueKanban);
+import VueKanban from 'vue-kanban4achiever';
+Vue.use(VueKanban);
+
+import Swal from 'admin-lte/plugins/sweetalert2/sweetalert2.js';
+import FullCalendar from 'admin-lte/plugins/fullcalendar/main.js'
+
 
 /**
  * The following block of code may be used to automatically register your

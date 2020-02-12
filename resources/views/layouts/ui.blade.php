@@ -20,7 +20,7 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-indigo elevation-4 "> {{-- sidebar-no-expand --}}
+  <aside class="main-sidebar sidebar-dark-warning elevation-4 "> {{-- sidebar-no-expand --}}
     <!-- Brand Logo -->
     <a href="/home" class="brand-link bg-white">
       <img src="img/achieverlogo.svg"
