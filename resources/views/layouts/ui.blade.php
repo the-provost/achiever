@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="/css/app.css">
 </head>
 
-<body class="hold-transition layout-fixed sidebar-mini layout-footer-fixed layout-navbar-fixed sidebar-collapse">
-<!-- Site wrapper -->
+<body class="hold-transition layout-fixed layout-footer-fixed sidebar-mini layout-navbar-fixed sidebar-collapse">
+<!-- Site wrapper  layout-footer-fixed -->
 <div class="wrapper" id="app">
 
     <!-- Navbar -->
@@ -37,14 +37,17 @@
 </aside>
 
   <!-- Content Wrapper. Contains page content -->
-<vue-progress-bar>
-    {{-- vue progress bar --}}
-</vue-progress-bar>
 
 
-<router-view>
-        {{-- vue components here --}}
-</router-view>
+
+    <router-view>
+            {{-- vue components here --}}
+    </router-view>
+
+<!-- /.content-wrapper -->
+
+
+
 
 
 

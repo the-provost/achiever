@@ -1,5 +1,5 @@
 <template>
-<div class="content-wrapper">
+<div class="content-wrapper pl-3 pr-3 pb-3 pt-3 mb-2" style="height: inherit; width:inherit;">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">

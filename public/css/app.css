@@ -52855,11 +52855,29 @@ readers do not read off random characters that represent icons */
   border: none !important;
 }
 
-html {
-  height: auto !important;
-  width: 99.1% !important;
-  background-color: #f4f6f9;
-  padding-left: 1% !important;
+.res-circle {
+  width: 60%;
+  border-radius: 50%;
+  line-height: 0;
+  background: #bcd6ff;
+  /* NECESSARY FOR TEXT */
+  position: relative;
+}
+
+.res-circle:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.circle-txt {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+  /* NOT IMPORTANT */
+  font-size: 100%;
+  font-weight: bold;
 }
 
 .content-wrapper {
@@ -52881,5 +52899,50 @@ html {
   height: 20% !important;
   background-color: #f89c12;
   -webkit-box-shadow: inset 0 0 1px #f89c12 !important;
+}
+
+.pbar1 {
+  background-color: #fff0dc !important;
+}
+
+.pbar2 {
+  background-color: #ffeebf !important;
+}
+
+.pbar3 {
+  background-color: #ffe2a4 !important;
+}
+
+.pbar4 {
+  background-color: #ffca8f !important;
+}
+
+.pbar5 {
+  background-color: #ffd17b !important;
+}
+
+.pbar6 {
+  background-color: #ffc667 !important;
+}
+
+.pbar7 {
+  background-color: #ffb850 !important;
+}
+
+.pbar8 {
+  background-color: #ffb33c !important;
+}
+
+.pbar9 {
+  background-color: #ffa728 !important;
+}
+
+.pbar10 {
+  background-color: #ff9b14 !important;
+}
+
+.goalbox {
+  background-color: white !important;
+  height: auto !important;
 }
 

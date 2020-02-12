@@ -36,8 +36,20 @@ Vue.use(VueProgressBar, options);
 import VueKanban from 'vue-kanban4achiever';
 Vue.use(VueKanban);
 
-import Swal from 'admin-lte/plugins/sweetalert2/sweetalert2.js';
-import FullCalendar from 'admin-lte/plugins/fullcalendar/main.js'
+import swal from 'admin-lte/plugins/sweetalert2/sweetalert2.js';
+window.Swal=swal;
+// const toast=swal.mixin({
+//   toast: true,
+//   position: 'top-end',
+//   showConfirmButton: false,
+//   timer: 6000
+// });
+// window.toast = toast;
+
+// Vue.use(Swal);
+import FullCalendar from 'admin-lte/plugins/fullcalendar/main.js';
+import Toastr from 'admin-lte/plugins/toastr/toastr.min.js';
+
 
 
 /**
@@ -64,7 +76,7 @@ const routes = [
 ]
 
 // Vue.component('overlay-scrollbars', OverlayScrollbarsComponent).default;
-
+window.Swal = swal;
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
