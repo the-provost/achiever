@@ -30,9 +30,10 @@ const options = {
     inverse: false
   }
 
-  Vue.use(VueProgressBar, options);
+Vue.use(VueProgressBar, options);
 
-
+import vueKanban from 'vue-kanban4achiever';
+Vue.use(vueKanban);
 
 /**
  * The following block of code may be used to automatically register your

@@ -27,7 +27,7 @@
                     <div class="card-header">{{ $route.meta.title }}</div>
 
                    <div class="card-body">
-                        Who doesn't like to mark stuff on a calendar. I know I do.
+
                         <br>
                         <h3>Coming Soon...</h3>
                     </div>

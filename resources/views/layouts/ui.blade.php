@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Achiever | An aid for the goal oriented</title>
+  <title>Achiever | An aid for the goal-oriented</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="/css/app.css">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed layout-footer-fixed layout-navbar-fixed">
+<body class="hold-transition layout-fixed sidebar-mini layout-footer-fixed layout-navbar-fixed sidebar-collapse">
 <!-- Site wrapper -->
 <div class="wrapper" id="app">
 
@@ -20,7 +20,7 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-indigo elevation-4 sidebar-no-expand">
+  <aside class="main-sidebar sidebar-dark-indigo elevation-4 "> {{-- sidebar-no-expand --}}
     <!-- Brand Logo -->
     <a href="/home" class="brand-link bg-white">
       <img src="img/achieverlogo.svg"
@@ -52,7 +52,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Achiever</b>  Version 1.0
     </div>
-    <strong>&copy; 2020 <a href="http://greymore.tech">Greymore Tech</a>.</strong> Open-Sourced under Licence.
+    For the ❤ of open-source, from <strong><a href="http://greymore.tech" target="_blank">Greymore Tech</a>.</strong>
   </footer>
 
   <!-- Control Sidebar -->

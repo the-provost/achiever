@@ -24,12 +24,22 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">{{ $route.meta.title }}</div>
+                    <div class="card-header">Move it around. See where you stand.</div>
 
                    <div class="card-body">
-                        Who doesn't like to mark stuff on a calendar. I know I do.
-                        <br>
-                        <h3>Coming Soon...</h3>
+                       <kanban-board :stages="stages" :blocks="blocks" @update-block="updateBlock">
+  <div v-for="stage in stages" :slot="stage" :key="stage">
+    <h2>{{ stage }}</h2>
+  </div>
+  <div v-for="block in blocks" :slot="block.id" :key="block.id">
+    <div>
+      <strong>id:</strong> {{ block.id }}
+    </div>
+    <div>
+      {{ block.title }}
+    </div>
+  </div>
+</kanban-board>
                     </div>
                 </div>
             </div>
@@ -45,8 +55,24 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+        data(){
+            return{
+            stages: ['bucket-list', 'in-progress', 'achieved', 'side-tracked'],
+            blocks: [
+                {
+                 id: 1,
+                 status: 'bucket-list',
+                 title: 'Test',
+                 },
+                     ],
+                   }
+                },
+        methods:{
+            mounted() {
+            console.log('Displaying Kanban Board')
+            }
+                }
+
     }
 </script>
+
