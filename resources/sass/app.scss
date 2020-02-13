@@ -38,19 +38,14 @@ $fa-font-path:    "~@fortawesome/fontawesome-free/webfonts";
     border: none !important;
 }
 
-.res-circle {
-    width: 60%;
-    border-radius: 50%;
-    line-height: 0;
-    background: #bcd6ff;
+.circle {
+    border-radius: 50px;
+    background: #ffffff !important;
     /* NECESSARY FOR TEXT */
-    position: relative;
+    position: center;
+    text-align: center !important;
   }
-  .res-circle:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-  }
+
   .circle-txt {
     position: absolute;
     bottom: 50%;

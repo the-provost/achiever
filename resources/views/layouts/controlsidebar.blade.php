@@ -5,6 +5,11 @@
         {{-- <span class="border border-bottom border-secondary"></span> --}}
         <br>
         <br>
+        <br>
+        <br>
+        <div class="nav-header justify-content-center center-block"  align="center">Tasks Completed
+        </div>
+        <br>
         <div class="col-md-12 d-flex">
             <div class="col-md-6 d-flex">
                 <div class="col-md-6 d-flex"></div>
@@ -15,11 +20,14 @@
                     style="opacity: 1; height: 35px;">
                 </div>
             </div>
-            <div class="col-md-6 d-flex pt-2">
-                <h4>0</h4>
+            <div class="col-md-6 d-flex pt-2 circle justify-content-center center-block">
+                <h4 style="color:black;">01</h4>
             </div>
         </div>
         <br>
+        <br>
+        <div class="nav-header justify-content-center center-block"  align="center">Goals Accomplished
+        </div>
         <br>
         <div class="col-md-12 d-flex">
             <div class="col-md-6 d-flex">
@@ -36,8 +44,8 @@
                     style="opacity: 1; height: 35px;">
                 </div>
             </div>
-            <div class="col-md-6 d-flex pt-2">
-               <h4>1</h4>
+            <div class="col-md-6 d-flex pt-2 circle justify-content-center center-block">
+               <h4 style="color:black;">01</h4>
             </div>
         </div>
 

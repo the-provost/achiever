@@ -52861,19 +52861,12 @@ readers do not read off random characters that represent icons */
   border: none !important;
 }
 
-.res-circle {
-  width: 60%;
-  border-radius: 50%;
-  line-height: 0;
-  background: #bcd6ff;
+.circle {
+  border-radius: 50px;
+  background: #ffffff !important;
   /* NECESSARY FOR TEXT */
-  position: relative;
-}
-
-.res-circle:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+  position: center;
+  text-align: center !important;
 }
 
 .circle-txt {
