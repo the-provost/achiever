@@ -16,13 +16,14 @@
         </div><!-- /.container-fluid -->
       </section>
 
+      <add-goal></add-goal>
+
     <!-- Main content -->
     <section class="content justify-content-center align-center">
 
 
         <div class="row justify-content-center">
             <div class="col-md-12">
-
 
 
 <!-- priority bars -->
@@ -50,11 +51,11 @@
 <div class="row justify-content-center center-block" align="center" style="width:100%;">
 <div class="col-md-10 d-flex justify-content-center center-block" align="center">
     <div class="col-md-5 justify-content-center center-block pt-4 pb-0" align="center">
-         <button type="button" class="btn btn-block btn-primary btn-large" style="width:70%;">🌑 New Goal</button>
+         <button type="button" class="btn btn-block btn-secondary btn-large" data-toggle="modal" data-target="#addGoalModal" style="width:70%;">🌑 New Goal</button>
     </div>
     <br>
     <div class="col-md-5 justify-content-center center-block pt-4 pb-0" align="center">
-        <button type="button" class="btn btn-block btn-primary btn-large" style="width:70%;">🔎 Filter 'em</button>
+        <button type="button" class="btn btn-block btn-secondary btn-large" data-toggle="modal" data-target="#addGoalModal" style="width:70%;">🔎 Filter 'em</button>
     </div>
 </div>
 <br>

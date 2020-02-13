@@ -50,6 +50,10 @@ window.Swal=swal;
 import FullCalendar from 'admin-lte/plugins/fullcalendar/main.js';
 import Toastr from 'admin-lte/plugins/toastr/toastr.min.js';
 
+import { Form, HasError, AlertError } from 'vform'
+// to have access to the form everywhere
+window.Form=Form;
+
 
 
 /**
@@ -62,6 +66,13 @@ import Toastr from 'admin-lte/plugins/toastr/toastr.min.js';
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+Vue.component(HasError.name, HasError)
+Vue.component(AlertError.name, AlertError)
+
+Vue.component('add-goal',require('./components/modals/AddGoalModal.vue').default);
+
+
 const routes = [
 {path:'/home', meta:{ title: 'Dashboard'}, component:require('./components/Dashboard.vue').default},
 {path:'/vision', meta:{ title: 'Vision Board'}, component:require('./components/Vision.vue').default},

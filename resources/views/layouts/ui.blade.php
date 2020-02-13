@@ -61,6 +61,8 @@
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
+     {{-- achievements in control sidebar here --}}
+     @include( 'layouts.controlsidebar' )
   </aside>
   <!-- /.control-sidebar -->
 </div>
