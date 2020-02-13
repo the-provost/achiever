@@ -48,8 +48,25 @@
 
     </section>
     <!-- /.content -->
+
+
+    <!-- Banner for Greydesk by greymore. DO NOT REMOVE UNDER ANY CIRCUMSTANCES -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row justify-content-center center-block">
+        <div class="col-md-10 justify-content-center center-block">
+        <img src="img/greydeskbanner.svg">
+        </div>
+    </div>
+    <!-- END of Banner for Greydesk by greymore. DO NOT REMOVE UNDER ANY CIRCUMSTANCES -->
+
+
 </div>
   <!-- /.content-wrapper -->
+
 
 </template>
 
