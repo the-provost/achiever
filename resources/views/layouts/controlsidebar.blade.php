@@ -38,7 +38,7 @@
                     style="opacity: 1; height: 35px;">
                 </div>
                 <div class="col-md-6 d-flex">
-                    <img src="img/achieverlogo.svg"
+                    <img src="img/achieverlogo2.svg"
                     alt="Achiever"
                     class="brand-image"
                     style="opacity: 1; height: 35px;">
