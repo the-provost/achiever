@@ -133,3 +133,37 @@ $fa-font-path:    "~@fortawesome/fontawesome-free/webfonts";
     background-color:white !important;
     height:auto !important;
 }
+
+.plus {
+    display:inline-block;
+    width:30px;
+    height:30px;
+
+    background:
+      linear-gradient(rgb(255, 255, 255),rgb(255, 255, 255)),
+      linear-gradient(rgb(255, 255, 255),rgb(255, 255, 255));
+    background-position:center;
+    background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
+    background-repeat:no-repeat;
+  }
+
+  .myCButton {
+	background-color:#ffc96b;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:8px 66px;
+	text-decoration:none;
+}
+.myCButton:hover {
+	background-color:#f6f6f6;
+}
+.myCButton:active {
+	position:relative;
+	top:1px;
+}
+

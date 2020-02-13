@@ -13891,8 +13891,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      stages: ['bucket-list', 'in-progress', 'achieved', 'side-tracked'],
+      stages: ['bucket-list', 'in-progress', 'achieved', 'side-tracked', 'discarded'],
       blocks: [{
+        id: 1,
+        status: 'bucket-list',
+        title: 'Test'
+      }, {
+        id: 1,
+        status: 'bucket-list',
+        title: 'Test'
+      }, {
         id: 1,
         status: 'bucket-list',
         title: 'Test'
@@ -13917,6 +13925,47 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -51498,140 +51547,248 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "content" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("br"),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "row col-md-12", attrs: { align: "center" } },
-            [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-md-12 row justify-content-center center-block",
-                  attrs: { align: "center" }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "col-md-2 d-flex pt-2",
-                      staticStyle: { display: "block" }
-                    },
-                    [_c("h4", [_vm._v("PRIORITY     CHART")])]
-                  ),
+    return _c(
+      "section",
+      { staticClass: "content justify-content-center align-center" },
+      [
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("br"),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "row col-md-12", attrs: { align: "center" } },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-md-12 row justify-content-center center-block",
+                    attrs: { align: "center" }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-md-2 d-flex pt-2",
+                        staticStyle: { display: "block" }
+                      },
+                      [_c("h4", [_vm._v("PRIORITY CHART")])]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "pbar1 col-md-1 d-flex justify-content-center pt-2 center-block",
+                        staticStyle: { display: "block" }
+                      },
+                      [_vm._v("1")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "pbar2 col-md-1 d-flex justify-content-center pt-2 center-block",
+                        staticStyle: { display: "block" }
+                      },
+                      [_vm._v("2")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "pbar3 col-md-1 d-flex justify-content-center pt-2 center-block",
+                        staticStyle: { display: "block" }
+                      },
+                      [_vm._v("3")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "pbar4 col-md-1 d-flex justify-content-center pt-2 center-block",
+                        staticStyle: { display: "block" }
+                      },
+                      [_vm._v("4")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "pbar5 col-md-1 d-flex justify-content-center pt-2 center-block",
+                        staticStyle: { display: "block" }
+                      },
+                      [_vm._v("5")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "pbar6 col-md-1 d-flex justify-content-center pt-2 center-block",
+                        staticStyle: { display: "block" }
+                      },
+                      [_vm._v("6")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "pbar7 col-md-1 d-flex justify-content-center pt-2 center-block",
+                        staticStyle: { display: "block" }
+                      },
+                      [_vm._v("7")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "pbar8 col-md-1 d-flex justify-content-center pt-2 center-block",
+                        staticStyle: { display: "block" }
+                      },
+                      [_vm._v("8")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "pbar9 col-md-1 d-flex justify-content-center pt-2 center-block",
+                        staticStyle: { display: "block" }
+                      },
+                      [_vm._v("9")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "pbar10 col-md-1 d-flex justify-content-center pt-2 center-block",
+                        staticStyle: { display: "block" }
+                      },
+                      [_vm._v("10")]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "row justify-content-center center-block",
+                staticStyle: { width: "100%" },
+                attrs: { align: "center" }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-md-10 d-flex justify-content-center center-block",
+                    attrs: { align: "center" }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-md-5 justify-content-center center-block pt-4 pb-0",
+                        attrs: { align: "center" }
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-block btn-primary btn-large",
+                            staticStyle: { width: "70%" },
+                            attrs: { type: "button" }
+                          },
+                          [_vm._v("🌑 New Goal")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-md-5 justify-content-center center-block pt-4 pb-0",
+                        attrs: { align: "center" }
+                      },
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-block btn-primary btn-large",
+                            staticStyle: { width: "70%" },
+                            attrs: { type: "button" }
+                          },
+                          [_vm._v("🔎 Filter 'em")]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("br")
+              ]
+            ),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "row justify-content-center center-block" },
+              [
+                _c("div", { staticClass: "col-sm-10" }, [
+                  _c("div", { staticClass: "card card-primary card-outline" }, [
+                    _c("div", { staticClass: "card-body" }, [
+                      _c("h5", { staticClass: "card-title" }, [
+                        _vm._v("Card title")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "card-text" }, [
+                        _vm._v(
+                          "\n         Some quick example text to build on the card title and make up the bulk of the card's\n         content.\n       "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "card-link", attrs: { href: "#" } },
+                        [_vm._v("Card link")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "card-link", attrs: { href: "#" } },
+                        [_vm._v("Another link")]
+                      )
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "pbar1 col-md-1 d-flex justify-content-center pt-2 center-block",
-                      staticStyle: { display: "block" }
-                    },
-                    [_vm._v("1")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "pbar2 col-md-1 d-flex justify-content-center pt-2 center-block",
-                      staticStyle: { display: "block" }
-                    },
-                    [_vm._v("2")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "pbar3 col-md-1 d-flex justify-content-center pt-2 center-block",
-                      staticStyle: { display: "block" }
-                    },
-                    [_vm._v("3")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "pbar4 col-md-1 d-flex justify-content-center pt-2 center-block",
-                      staticStyle: { display: "block" }
-                    },
-                    [_vm._v("4")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "pbar5 col-md-1 d-flex justify-content-center pt-2 center-block",
-                      staticStyle: { display: "block" }
-                    },
-                    [_vm._v("5")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "pbar6 col-md-1 d-flex justify-content-center pt-2 center-block",
-                      staticStyle: { display: "block" }
-                    },
-                    [_vm._v("6")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "pbar7 col-md-1 d-flex justify-content-center pt-2 center-block",
-                      staticStyle: { display: "block" }
-                    },
-                    [_vm._v("7")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "pbar8 col-md-1 d-flex justify-content-center pt-2 center-block",
-                      staticStyle: { display: "block" }
-                    },
-                    [_vm._v("8")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "pbar9 col-md-1 d-flex justify-content-center pt-2 center-block",
-                      staticStyle: { display: "block" }
-                    },
-                    [_vm._v("9")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "pbar10 col-md-1 d-flex justify-content-center pt-2 center-block",
-                      staticStyle: { display: "block" }
-                    },
-                    [_vm._v("10")]
-                  )
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c("br")
+                  _c("br")
+                ])
+              ]
+            )
+          ])
         ])
-      ])
-    ])
+      ]
+    )
   }
 ]
 render._withStripped = true

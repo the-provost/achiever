@@ -57,9 +57,19 @@
     export default {
         data(){
             return{
-            stages: ['bucket-list', 'in-progress', 'achieved', 'side-tracked'],
+            stages: ['bucket-list', 'in-progress', 'achieved', 'side-tracked', 'discarded'],
             blocks: [
                 {
+                 id: 1,
+                 status: 'bucket-list',
+                 title: 'Test',
+                 },
+                 {
+                 id: 1,
+                 status: 'bucket-list',
+                 title: 'Test',
+                 },
+                 {
                  id: 1,
                  status: 'bucket-list',
                  title: 'Test',

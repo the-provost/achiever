@@ -40948,7 +40948,7 @@ ul.drag-inner-list {
 .drag-column-in-progress .drag-column-header,
 .drag-column-in-progress .is-moved,
 .drag-column-in-progress .drag-options {
-  background: #2A92BF;
+  background: #3eabda;
 }
 
 .drag-column-achieved .drag-column-header,
@@ -40961,6 +40961,12 @@ ul.drag-inner-list {
 .drag-column-side-tracked .is-moved,
 .drag-column-side-tracked .drag-options {
   background: #00B961;
+}
+
+.drag-column-discarded .drag-column-header,
+.drag-column-discarded .is-moved,
+.drag-column-discarded .drag-options {
+  background: #800202;
 }
 
 .drag-column-header {
@@ -52944,5 +52950,38 @@ readers do not read off random characters that represent icons */
 .goalbox {
   background-color: white !important;
   height: auto !important;
+}
+
+.plus {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(white, white), linear-gradient(white, white);
+  background-position: center;
+  background-size: 50% 2px, 2px 50%;
+  /*thickness = 2px, length = 50% (25px)*/
+  background-repeat: no-repeat;
+}
+
+.myCButton {
+  background-color: #ffc96b;
+  border-radius: 42px;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 8px 66px;
+  text-decoration: none;
+}
+
+.myCButton:hover {
+  background-color: #f6f6f6;
+}
+
+.myCButton:active {
+  position: relative;
+  top: 1px;
 }
 
