@@ -7,7 +7,7 @@
         <br>
         <br>
         <br>
-        <div class="nav-header justify-content-center center-block"  align="center">Tasks Completed
+        <div class="nav-header justify-content-center center-block"  align="center"><b>TASKS COMPLETED 🏅</b>
         </div>
         <br>
         <div class="col-md-12 d-flex">
@@ -26,7 +26,7 @@
         </div>
         <br>
         <br>
-        <div class="nav-header justify-content-center center-block"  align="center">Goals Accomplished
+        <div class="nav-header justify-content-center center-block"  align="center"><b>GOALS ACCOMPLISHED 🎖</b>
         </div>
         <br>
         <div class="col-md-12 d-flex">
