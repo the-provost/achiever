@@ -13828,6 +13828,69 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -13998,6 +14061,30 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -52609,14 +52696,16 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("section", { staticClass: "content" }, [
-        _c("div", { staticClass: "row justify-content-center" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", { staticClass: "row justify-content-center shadow-none" }, [
           _c("div", { staticClass: "col-md-12" }, [
-            _c("div", { staticClass: "card" }, [
-              _c("div", { staticClass: "card-header" }, [
+            _c("div", { staticClass: "card shadow-none" }, [
+              _c("div", { staticClass: "card-header shadow-none" }, [
                 _vm._v(_vm._s(_vm.$route.meta.title))
               ]),
               _vm._v(" "),
-              _vm._m(1)
+              _vm._m(2)
             ])
           ])
         ])
@@ -52632,7 +52721,7 @@ var render = function() {
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-      _vm._m(2),
+      _vm._m(3),
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
@@ -52653,7 +52742,113 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-body" }, [
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
+        _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
+          _c("span", { staticClass: "info-box-icon" }, [
+            _c("i", { staticClass: "far fa-calendar-alt" })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "info-box-content" }, [
+            _c("span", { staticClass: "info-box-text" }, [_vm._v("Events")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "info-box-number" }, [_vm._v("41,410")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "progress" }, [
+              _c("div", {
+                staticClass: "progress-bar",
+                staticStyle: { width: "70%" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "progress-description" }, [
+              _vm._v("\n          70% Increase in 30 Days\n        ")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
+        _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
+          _c("span", { staticClass: "info-box-icon" }, [
+            _c("i", { staticClass: "far fa-calendar-alt" })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "info-box-content" }, [
+            _c("span", { staticClass: "info-box-text" }, [_vm._v("Events")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "info-box-number" }, [_vm._v("41,410")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "progress" }, [
+              _c("div", {
+                staticClass: "progress-bar",
+                staticStyle: { width: "70%" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "progress-description" }, [
+              _vm._v("\n          70% Increase in 30 Days\n        ")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
+        _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
+          _c("span", { staticClass: "info-box-icon" }, [
+            _c("i", { staticClass: "far fa-calendar-alt" })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "info-box-content" }, [
+            _c("span", { staticClass: "info-box-text" }, [_vm._v("Events")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "info-box-number" }, [_vm._v("41,410")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "progress" }, [
+              _c("div", {
+                staticClass: "progress-bar",
+                staticStyle: { width: "70%" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "progress-description" }, [
+              _vm._v("\n          70% Increase in 30 Days\n        ")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
+        _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
+          _c("span", { staticClass: "info-box-icon" }, [
+            _c("i", { staticClass: "far fa-calendar-alt" })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "info-box-content" }, [
+            _c("span", { staticClass: "info-box-text" }, [_vm._v("Events")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "info-box-number" }, [_vm._v("41,410")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "progress" }, [
+              _c("div", {
+                staticClass: "progress-bar",
+                staticStyle: { width: "70%" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "progress-description" }, [
+              _vm._v("\n          70% Increase in 30 Days\n        ")
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body shadow-none" }, [
       _c("h2", [_vm._v("A vision board of sorts")]),
       _vm._v(" "),
       _c("br"),
@@ -52675,7 +52870,7 @@ var staticRenderFns = [
       [
         _c(
           "div",
-          { staticClass: "col-md-10 justify-content-center center-block" },
+          { staticClass: "col-md-6 justify-content-center center-block" },
           [_c("img", { attrs: { src: "img/greydeskbanner.svg" } })]
         )
       ]
@@ -53136,7 +53331,10 @@ var staticRenderFns = [
                               "data-target": "#addGoalModal"
                             }
                           },
-                          [_vm._v("🌑 New Goal")]
+                          [
+                            _c("i", { staticClass: "fas fa-plus" }),
+                            _vm._v(" New Goal")
+                          ]
                         )
                       ]
                     ),
@@ -53163,7 +53361,10 @@ var staticRenderFns = [
                               "data-target": "#addGoalModal"
                             }
                           },
-                          [_vm._v("🔎 Filter 'em")]
+                          [
+                            _c("i", { staticClass: "fas fa-search" }),
+                            _vm._v(" Filter 'em")
+                          ]
                         )
                       ]
                     )
@@ -53183,31 +53384,85 @@ var staticRenderFns = [
               { staticClass: "row justify-content-center center-block" },
               [
                 _c("div", { staticClass: "col-sm-10" }, [
-                  _c("div", { staticClass: "card card-primary card-outline" }, [
-                    _c("div", { staticClass: "card-body" }, [
-                      _c("h5", { staticClass: "card-title" }, [
-                        _vm._v("Card title")
-                      ]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text" }, [
-                        _vm._v(
-                          "\n         Some quick example text to build on the card title and make up the bulk of the card's\n         content.\n       "
+                  _c(
+                    "div",
+                    {
+                      staticClass: "card card-primary card-outline shadow-none"
+                    },
+                    [
+                      _c("div", { staticClass: "card-body" }, [
+                        _c("h5", { staticClass: "card-title" }, [
+                          _vm._v("Card title")
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text" }, [
+                          _vm._v(
+                            "\n         Some quick example text to build on the card title and make up the bulk of the card's\n         content.\n       "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "card-link", attrs: { href: "#" } },
+                          [_vm._v("Card link")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "card-link", attrs: { href: "#" } },
+                          [_vm._v("Another link")]
                         )
-                      ]),
-                      _vm._v(" "),
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-md-12 justify-content-center center-block"
+                    },
+                    [
                       _c(
-                        "a",
-                        { staticClass: "card-link", attrs: { href: "#" } },
-                        [_vm._v("Card link")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "card-link", attrs: { href: "#" } },
-                        [_vm._v("Another link")]
+                        "div",
+                        {
+                          staticClass:
+                            "card card-primary card-outline-primary shadow-none"
+                        },
+                        [
+                          _c("div", { staticClass: "card-body" }, [
+                            _c("h5", { staticClass: "card-title" }, [
+                              _vm._v("Card title")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "card-text" }, [
+                              _vm._v(
+                                "\n         Some quick example text to build on the card title and make up the bulk of the card's\n         content.\n       "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "card-link",
+                                attrs: { href: "#" }
+                              },
+                              [_vm._v("Card link")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "card-link",
+                                attrs: { href: "#" }
+                              },
+                              [_vm._v("Another link")]
+                            )
+                          ])
+                        ]
                       )
-                    ])
-                  ]),
+                    ]
+                  ),
                   _vm._v(" "),
                   _c("br")
                 ])
@@ -53228,7 +53483,7 @@ var staticRenderFns = [
       [
         _c(
           "div",
-          { staticClass: "col-md-10 justify-content-center center-block" },
+          { staticClass: "col-md-6 justify-content-center center-block" },
           [_c("img", { attrs: { src: "img/greydeskbanner.svg" } })]
         )
       ]
@@ -70002,8 +70257,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /mnt/j/glab/achiever/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /mnt/j/glab/achiever/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! J:\glab\achiever\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! J:\glab\achiever\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

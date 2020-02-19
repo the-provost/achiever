@@ -51,11 +51,11 @@
 <div class="row justify-content-center center-block" align="center" style="width:100%;">
 <div class="col-md-10 d-flex justify-content-center center-block" align="center">
     <div class="col-md-5 justify-content-center center-block pt-4 pb-0" align="center">
-         <button type="button" class="btn btn-block btn-secondary btn-large" data-toggle="modal" data-target="#addGoalModal" style="width:70%;">🌑 New Goal</button>
+         <button type="button" class="btn btn-block btn-secondary btn-large" data-toggle="modal" data-target="#addGoalModal" style="width:70%;"><i class="fas fa-plus"></i> New Goal</button>
     </div>
     <br>
     <div class="col-md-5 justify-content-center center-block pt-4 pb-0" align="center">
-        <button type="button" class="btn btn-block btn-secondary btn-large" data-toggle="modal" data-target="#addGoalModal" style="width:70%;">🔎 Filter 'em</button>
+        <button type="button" class="btn btn-block btn-secondary btn-large" data-toggle="modal" data-target="#addGoalModal" style="width:70%;"><i class="fas fa-search"></i> Filter 'em</button>
     </div>
 </div>
 <br>
@@ -71,7 +71,7 @@
 
 
 <!-- list item divs -->
-<div class="card card-primary card-outline">
+<div class="card card-primary card-outline shadow-none">
      <div class="card-body">
        <h5 class="card-title">Card title</h5>
        <p class="card-text">
@@ -83,6 +83,30 @@
      </div>
 </div>
 <!-- list item div ends -->
+
+
+
+<!-- list item divs -->
+
+  <div class="col-md-12 justify-content-center center-block">
+    <div class="card card-primary card-outline-primary shadow-none">
+      <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    
+       <p class="card-text">
+         Some quick example text to build on the card title and make up the bulk of the card's
+         content.
+       </p>
+       <a href="#" class="card-link">Card link</a>
+       <a href="#" class="card-link">Another link</a>
+     </div>
+    </div>
+</div>
+
+
+<!-- list item div ends -->
+
+
 
 <br>
 
@@ -108,7 +132,7 @@
     <br>
     <br>
     <div class="row justify-content-center center-block">
-        <div class="col-md-10 justify-content-center center-block">
+        <div class="col-md-6 justify-content-center center-block">
         <img src="img/greydeskbanner.svg">
         </div>
     </div>

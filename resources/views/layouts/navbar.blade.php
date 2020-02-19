@@ -92,7 +92,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
-          <i class="fas fa-th-large"></i>
+          <b><i class="fas fa-medal"></i></b>
         </a>
       </li>
 

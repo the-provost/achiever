@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/css/app.css">
 </head>
 
-<body class="hold-transition layout-fixed layout-footer-fixed sidebar-mini layout-navbar-fixed sidebar-collapse">
+<body class="hold-transition layout-fixed layout-footer-fixed sidebar-mini layout-navbar-fixed sidebar-collapse shadow-none">
 <!-- Site wrapper  layout-footer-fixed -->
 <div class="wrapper" id="app">
 
@@ -23,7 +23,7 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-warning elevation-4 "> {{-- sidebar-no-expand --}}
+  <aside class="main-sidebar sidebar-dark-warning elevation-4 shadow-none border-none"> {{-- sidebar-no-expand --}}
     <!-- Brand Logo -->
     <a href="/home" class="brand-link bg-white">
       <img src="img/achieverlogo.svg"
@@ -51,8 +51,8 @@
 
 
 
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
+  <footer class="main-footer border-none shadow-none">
+    <div class="float-right d-none d-sm-block border-none shadow-none">
       <b>Achiever</b>  Version 1.0
     </div>
     For the ❤ of open-source, from <strong><a href="http://greymore.tech" target="_blank">Greymore Tech</a>.</strong>
