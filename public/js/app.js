@@ -13891,6 +13891,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -14061,6 +14088,85 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -52698,6 +52804,12 @@ var render = function() {
       _c("section", { staticClass: "content" }, [
         _vm._m(1),
         _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
         _c("div", { staticClass: "row justify-content-center shadow-none" }, [
           _c("div", { staticClass: "col-md-12" }, [
             _c("div", { staticClass: "card shadow-none" }, [
@@ -52705,7 +52817,7 @@ var render = function() {
                 _vm._v(_vm._s(_vm.$route.meta.title))
               ]),
               _vm._v(" "),
-              _vm._m(2)
+              _vm._m(3)
             ])
           ])
         ])
@@ -52721,7 +52833,7 @@ var render = function() {
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-      _vm._m(3),
+      _vm._m(4),
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
@@ -52746,11 +52858,11 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
         _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
           _c("span", { staticClass: "info-box-icon" }, [
-            _c("i", { staticClass: "far fa-calendar-alt" })
+            _c("i", { staticClass: "fas fa-crosshairs" })
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "info-box-content" }, [
-            _c("span", { staticClass: "info-box-text" }, [_vm._v("Events")]),
+            _c("span", { staticClass: "info-box-text" }, [_vm._v("Goals")]),
             _vm._v(" "),
             _c("span", { staticClass: "info-box-number" }, [_vm._v("41,410")]),
             _vm._v(" "),
@@ -52771,11 +52883,11 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
         _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
           _c("span", { staticClass: "info-box-icon" }, [
-            _c("i", { staticClass: "far fa-calendar-alt" })
+            _c("i", { staticClass: "fas fa-tasks" })
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "info-box-content" }, [
-            _c("span", { staticClass: "info-box-text" }, [_vm._v("Events")]),
+            _c("span", { staticClass: "info-box-text" }, [_vm._v("Tasks")]),
             _vm._v(" "),
             _c("span", { staticClass: "info-box-number" }, [_vm._v("41,410")]),
             _vm._v(" "),
@@ -52796,11 +52908,13 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
         _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
           _c("span", { staticClass: "info-box-icon" }, [
-            _c("i", { staticClass: "far fa-calendar-alt" })
+            _c("i", { staticClass: "fas fa-calendar-check" })
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "info-box-content" }, [
-            _c("span", { staticClass: "info-box-text" }, [_vm._v("Events")]),
+            _c("span", { staticClass: "info-box-text" }, [
+              _vm._v("Accomplished")
+            ]),
             _vm._v(" "),
             _c("span", { staticClass: "info-box-number" }, [_vm._v("41,410")]),
             _vm._v(" "),
@@ -52821,11 +52935,11 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
         _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
           _c("span", { staticClass: "info-box-icon" }, [
-            _c("i", { staticClass: "far fa-calendar-alt" })
+            _c("i", { staticClass: "fas fa-spinner" })
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "info-box-content" }, [
-            _c("span", { staticClass: "info-box-text" }, [_vm._v("Events")]),
+            _c("span", { staticClass: "info-box-text" }, [_vm._v("Progress")]),
             _vm._v(" "),
             _c("span", { staticClass: "info-box-number" }, [_vm._v("41,410")]),
             _vm._v(" "),
@@ -52839,6 +52953,44 @@ var staticRenderFns = [
             _c("span", { staticClass: "progress-description" }, [
               _vm._v("\n          70% Increase in 30 Days\n        ")
             ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-6 col-sm-6 col-12" }, [
+        _c("div", { staticClass: "info-box" }, [
+          _c("span", { staticClass: "info-box-icon bg-primary" }, [
+            _c("i", { staticClass: "fas fa-thumbs-up" })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "info-box-content" }, [
+            _c("span", { staticClass: "info-box-text" }, [_vm._v("Messages")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "info-box-number" }, [_vm._v("1,410")])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-6 col-sm-6 col-12" }, [
+        _c("div", { staticClass: "info-box" }, [
+          _c("span", { staticClass: "info-box-icon bg-primary" }, [
+            _vm._v(" "),
+            _c("i", { staticClass: "fas fa-thumbs-up" }),
+            _vm._v(" "),
+            _c("i", { staticClass: "fas fa-thumbs-up" }),
+            _vm._v(" ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "info-box-content" }, [
+            _c("span", { staticClass: "info-box-text" }, [_vm._v("Messages")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "info-box-number" }, [_vm._v("1,410")])
           ])
         ])
       ])
@@ -53391,53 +53543,15 @@ var staticRenderFns = [
                     },
                     [
                       _c("div", { staticClass: "card-body" }, [
-                        _c("h5", { staticClass: "card-title" }, [
-                          _vm._v("Card title")
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
-                          _vm._v(
-                            "\n         Some quick example text to build on the card title and make up the bulk of the card's\n         content.\n       "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          { staticClass: "card-link", attrs: { href: "#" } },
-                          [_vm._v("Card link")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          { staticClass: "card-link", attrs: { href: "#" } },
-                          [_vm._v("Another link")]
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "col-md-12 justify-content-center center-block"
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "card card-primary card-outline-primary shadow-none"
-                        },
-                        [
-                          _c("div", { staticClass: "card-body" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c("div", { staticClass: "col-md-12" }, [
                             _c("h5", { staticClass: "card-title" }, [
                               _vm._v("Card title")
                             ]),
                             _vm._v(" "),
                             _c("p", { staticClass: "card-text" }, [
                               _vm._v(
-                                "\n         Some quick example text to build on the card title and make up the bulk of the card's\n         content.\n       "
+                                "\n             Some quick example text to build on the card title and make up the bulk of the card's\n             content.\n           "
                               )
                             ]),
                             _vm._v(" "),
@@ -53457,12 +53571,347 @@ var staticRenderFns = [
                                 attrs: { href: "#" }
                               },
                               [_vm._v("Another link")]
-                            )
-                          ])
-                        ]
-                      )
+                            ),
+                            _vm._v(" "),
+                            _c("br")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "row",
+                              staticStyle: { width: "100%" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-md-12 d-flex" }, [
+                                _c("div", { staticClass: "col-md-2 d-flex" }, [
+                                  _c("div", { staticClass: "btn-group" }, [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass: "btn btn-secondary",
+                                        staticStyle: { width: "110%" },
+                                        attrs: { type: "button" }
+                                      },
+                                      [_vm._v("\n             Tasks")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass: "btn btn-secondary",
+                                        staticStyle: { width: "100%" },
+                                        attrs: {
+                                          type: "button",
+                                          "data-toggle": "modal",
+                                          "data-target": "#addTaskModal"
+                                        }
+                                      },
+                                      [_c("i", { staticClass: "fas fa-plus" })]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass: "btn btn-secondary",
+                                        staticStyle: { width: "100%" },
+                                        attrs: {
+                                          type: "button",
+                                          "data-toggle": "modal",
+                                          "data-target": "#addTaskModal"
+                                        }
+                                      },
+                                      [_c("i", { staticClass: "fas fa-list" })]
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-md-2 d-flex ml-4" },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass: "btn btn-secondary",
+                                        staticStyle: { width: "100%" },
+                                        attrs: {
+                                          type: "button",
+                                          "data-toggle": "modal",
+                                          "data-target": "#addTaskModal"
+                                        }
+                                      },
+                                      [_c("i", { staticClass: "far fa-edit" })]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-md-2 d-flex" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "priority-unit d-flex pt-0 pl-4"
+                                    },
+                                    [
+                                      _c("div", {
+                                        staticClass: "priority-circle pbar10",
+                                        staticStyle: {
+                                          height: "30px",
+                                          width: "30px",
+                                          "border-radius": "100%"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-md-6 pt-2" }, [
+                                  _c(
+                                    "div",
+                                    { staticClass: "progress progress-xss" },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "progress-bar pbar10 progress-bar-striped",
+                                          staticStyle: { width: "60%" },
+                                          attrs: {
+                                            role: "progressbar",
+                                            "aria-valuenow": "60",
+                                            "aria-valuemin": "0",
+                                            "aria-valuemax": "100"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "span",
+                                            { staticClass: "sr-only" },
+                                            [_vm._v("60% Complete (warning)")]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]
+                          )
+                        ])
+                      ])
                     ]
                   ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "taskrow" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-md-12 justify-content-center center-block"
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "card card-warning card-outline-warning shadow-none",
+                            staticStyle: {
+                              "background-color": "rgba(250, 218, 136, 0.34)"
+                            }
+                          },
+                          [
+                            _c("div", { staticClass: "card-body" }, [
+                              _c("div", { staticClass: "row" }, [
+                                _c("div", { staticClass: "col-md-12" }, [
+                                  _c("h5", { staticClass: "card-title" }, [
+                                    _vm._v("Card title")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "card-text" }, [
+                                    _vm._v(
+                                      "\n             Some quick example text to build on the card title and make up the bulk of the card's\n             content.\n           "
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "card-link",
+                                      attrs: { href: "#" }
+                                    },
+                                    [_vm._v("Card link")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "card-link",
+                                      attrs: { href: "#" }
+                                    },
+                                    [_vm._v("Another link")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("br")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "row",
+                                    staticStyle: { width: "100%" }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-md-12 d-flex" },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "col-md-4 d-flex" },
+                                          [
+                                            _c(
+                                              "div",
+                                              { staticClass: "btn-group" },
+                                              [
+                                                _c(
+                                                  "button",
+                                                  {
+                                                    staticClass:
+                                                      "btn btn-secondary",
+                                                    staticStyle: {
+                                                      width: "100%"
+                                                    },
+                                                    attrs: {
+                                                      type: "button",
+                                                      "data-toggle": "modal",
+                                                      "data-target":
+                                                        "#addTaskModal"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("i", {
+                                                      staticClass: "fas fa-plus"
+                                                    })
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "button",
+                                                  {
+                                                    staticClass:
+                                                      "btn btn-secondary",
+                                                    staticStyle: {
+                                                      width: "100%"
+                                                    },
+                                                    attrs: {
+                                                      type: "button",
+                                                      "data-toggle": "modal",
+                                                      "data-target":
+                                                        "#addTaskModal"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("i", {
+                                                      staticClass: "far fa-edit"
+                                                    })
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("br"),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "col-md-2 d-flex" },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "priority-unit d-flex pt-0 pl-4"
+                                              },
+                                              [
+                                                _c("div", {
+                                                  staticClass:
+                                                    "priority-circle pbar10",
+                                                  staticStyle: {
+                                                    height: "30px",
+                                                    width: "30px",
+                                                    "border-radius": "100%"
+                                                  }
+                                                })
+                                              ]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("br"),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "col-md-6 pt-2" },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "progress progress-xss"
+                                              },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "progress-bar pbar10 progress-bar-striped",
+                                                    staticStyle: {
+                                                      width: "60%"
+                                                    },
+                                                    attrs: {
+                                                      role: "progressbar",
+                                                      "aria-valuenow": "60",
+                                                      "aria-valuemin": "0",
+                                                      "aria-valuemax": "100"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "span",
+                                                      {
+                                                        staticClass: "sr-only"
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "60% Complete (warning)"
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ])
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
                   _vm._v(" "),
                   _c("br")
                 ])

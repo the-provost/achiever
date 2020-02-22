@@ -24,7 +24,7 @@ class CreateGoalsTable extends Migration
             $table->enum('term', ['Short Term', 'Long Term','Continuous Pursuit']);
             $table->enum('priority', ['1', '2','3','4','5','6','7','8','9','10']);
             $table->enum('status',['Bucket-List','In-Progress','Achieved','Side-Tracked'])->default('Bucket-List');
-            $table->string('percentage', 255);
+            $table->string('percentage', 255)->nullable();
             $table->enum('type', ['Goal', 'Task']);
             $table->bigInteger('task_id', 255)->nullable();
             $table->timestamps();
