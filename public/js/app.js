@@ -52859,7 +52859,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
-        _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
+        _c("div", { staticClass: "info-box pbar7 shadow-none" }, [
           _c("span", { staticClass: "info-box-icon" }, [
             _c("i", { staticClass: "fas fa-crosshairs" })
           ]),
@@ -52884,7 +52884,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
-        _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
+        _c("div", { staticClass: "info-box pbar7 shadow-none" }, [
           _c("span", { staticClass: "info-box-icon" }, [
             _c("i", { staticClass: "fas fa-tasks" })
           ]),
@@ -52909,7 +52909,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
-        _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
+        _c("div", { staticClass: "info-box pbar7 shadow-none" }, [
           _c("span", { staticClass: "info-box-icon" }, [
             _c("i", { staticClass: "fas fa-calendar-check" })
           ]),
@@ -52936,7 +52936,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
-        _c("div", { staticClass: "info-box bg-gradient-warning shadow-none" }, [
+        _c("div", { staticClass: "info-box pbar7 shadow-none" }, [
           _c("span", { staticClass: "info-box-icon" }, [
             _c("i", { staticClass: "fas fa-spinner" })
           ]),
@@ -52968,7 +52968,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-6 col-sm-6 col-12" }, [
         _c("div", { staticClass: "info-box" }, [
-          _c("span", { staticClass: "info-box-icon bg-primary" }, [
+          _c("span", { staticClass: "info-box-icon pbar3" }, [
             _c("i", { staticClass: "fas fa-thumbs-up" })
           ]),
           _vm._v(" "),
@@ -52982,7 +52982,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "col-md-6 col-sm-6 col-12" }, [
         _c("div", { staticClass: "info-box" }, [
-          _c("span", { staticClass: "info-box-icon bg-primary" }, [
+          _c("span", { staticClass: "info-box-icon pbar3" }, [
             _vm._v(" "),
             _c("i", { staticClass: "fas fa-thumbs-up" }),
             _vm._v(" "),

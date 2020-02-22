@@ -101,7 +101,7 @@
            <br>
            <div class="col-md-2 d-flex ml-4">
              <button type="button" class="btn pbar7" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
-           <i class="far fa-edit"></i>&nbspEdit</button>
+           <i class="far fa-edit"></i>&nbsp;Edit</button>
            </div>
            <br>
            <div class="col-md-1 d-flex">
