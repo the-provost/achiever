@@ -14315,6 +14315,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -53474,8 +53477,7 @@ var staticRenderFns = [
                         _c(
                           "button",
                           {
-                            staticClass:
-                              "btn btn-block btn-secondary btn-large",
+                            staticClass: "btn btn-block pbar7 btn-large",
                             staticStyle: { width: "70%" },
                             attrs: {
                               type: "button",
@@ -53504,8 +53506,7 @@ var staticRenderFns = [
                         _c(
                           "button",
                           {
-                            staticClass:
-                              "btn btn-block btn-secondary btn-large",
+                            staticClass: "btn btn-block pbar7 btn-large",
                             staticStyle: { width: "70%" },
                             attrs: {
                               type: "button",
@@ -53589,8 +53590,8 @@ var staticRenderFns = [
                                     _c(
                                       "button",
                                       {
-                                        staticClass: "btn btn-secondary",
-                                        staticStyle: { width: "110%" },
+                                        staticClass: "btn pbar7",
+                                        staticStyle: { width: "100%" },
                                         attrs: { type: "button" }
                                       },
                                       [_vm._v("\n             Tasks")]
@@ -53599,7 +53600,7 @@ var staticRenderFns = [
                                     _c(
                                       "button",
                                       {
-                                        staticClass: "btn btn-secondary",
+                                        staticClass: "btn pbar7",
                                         staticStyle: { width: "100%" },
                                         attrs: {
                                           type: "button",
@@ -53613,7 +53614,7 @@ var staticRenderFns = [
                                     _c(
                                       "button",
                                       {
-                                        staticClass: "btn btn-secondary",
+                                        staticClass: "btn pbar7",
                                         staticStyle: { width: "100%" },
                                         attrs: {
                                           type: "button",
@@ -53635,7 +53636,7 @@ var staticRenderFns = [
                                     _c(
                                       "button",
                                       {
-                                        staticClass: "btn btn-secondary",
+                                        staticClass: "btn pbar7",
                                         staticStyle: { width: "100%" },
                                         attrs: {
                                           type: "button",
@@ -53643,14 +53644,17 @@ var staticRenderFns = [
                                           "data-target": "#addTaskModal"
                                         }
                                       },
-                                      [_c("i", { staticClass: "far fa-edit" })]
+                                      [
+                                        _c("i", { staticClass: "far fa-edit" }),
+                                        _vm._v(" Edit")
+                                      ]
                                     )
                                   ]
                                 ),
                                 _vm._v(" "),
                                 _c("br"),
                                 _vm._v(" "),
-                                _c("div", { staticClass: "col-md-2 d-flex" }, [
+                                _c("div", { staticClass: "col-md-1 d-flex" }, [
                                   _c(
                                     "div",
                                     {
@@ -53714,7 +53718,7 @@ var staticRenderFns = [
                       "div",
                       {
                         staticClass:
-                          "col-md-12 justify-content-center center-block"
+                          "col-md-11 justify-content-center center-block"
                       },
                       [
                         _c(
@@ -53774,7 +53778,7 @@ var staticRenderFns = [
                                       [
                                         _c(
                                           "div",
-                                          { staticClass: "col-md-4 d-flex" },
+                                          { staticClass: "col-md-2 d-flex" },
                                           [
                                             _c(
                                               "div",
@@ -53783,8 +53787,7 @@ var staticRenderFns = [
                                                 _c(
                                                   "button",
                                                   {
-                                                    staticClass:
-                                                      "btn btn-secondary",
+                                                    staticClass: "btn pbar7",
                                                     staticStyle: {
                                                       width: "100%"
                                                     },
@@ -53797,7 +53800,7 @@ var staticRenderFns = [
                                                   },
                                                   [
                                                     _c("i", {
-                                                      staticClass: "fas fa-plus"
+                                                      staticClass: "fas fa-edit"
                                                     })
                                                   ]
                                                 ),
@@ -53805,8 +53808,7 @@ var staticRenderFns = [
                                                 _c(
                                                   "button",
                                                   {
-                                                    staticClass:
-                                                      "btn btn-secondary",
+                                                    staticClass: "btn pbar7",
                                                     staticStyle: {
                                                       width: "100%"
                                                     },
@@ -53819,7 +53821,30 @@ var staticRenderFns = [
                                                   },
                                                   [
                                                     _c("i", {
-                                                      staticClass: "far fa-edit"
+                                                      staticClass:
+                                                        "fas fa-trash"
+                                                    })
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "button",
+                                                  {
+                                                    staticClass: "btn pbar7",
+                                                    staticStyle: {
+                                                      width: "100%"
+                                                    },
+                                                    attrs: {
+                                                      type: "button",
+                                                      "data-toggle": "modal",
+                                                      "data-target":
+                                                        "#addTaskModal"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fas fa-exchange-alt"
                                                     })
                                                   ]
                                                 )
@@ -53832,7 +53857,7 @@ var staticRenderFns = [
                                         _vm._v(" "),
                                         _c(
                                           "div",
-                                          { staticClass: "col-md-2 d-flex" },
+                                          { staticClass: "col-md-4 d-flex" },
                                           [
                                             _c(
                                               "div",
@@ -53872,7 +53897,7 @@ var staticRenderFns = [
                                                   "div",
                                                   {
                                                     staticClass:
-                                                      "progress-bar pbar10 progress-bar-striped",
+                                                      "progress-bar pbar7 progress-bar-striped",
                                                     staticStyle: {
                                                       width: "60%"
                                                     },
