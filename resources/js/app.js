@@ -71,6 +71,7 @@ Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
 
 Vue.component('add-goal',require('./components/modals/AddGoalModal.vue').default);
+Vue.component('add-task',require('./components/modals/AddTaskModal.vue').default);
 
 
 const routes = [

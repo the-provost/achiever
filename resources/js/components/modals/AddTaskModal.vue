@@ -1,10 +1,10 @@
 <template>
 <!-- Modal -->
-<div class="modal fade" id="addGoalModal" tabindex="-1" role="dialog" aria-labelledby="addGoalModalModalLabel" aria-hidden="true">
+<div class="modal fade" id="addTaskModal" tabindex="-1" role="dialog" aria-labelledby="addTaskModalModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addGoalModalLabel">Add a new goal</h5>
+        <h5 class="modal-title" id="addTaskModalLabel">Add a new task to this goal</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -16,7 +16,7 @@
                 <form role="form">
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Goal</label>
+                        <label>Task</label>
                         <input v-model="form.username" type="text" name="username" class="form-control" :class="{ 'is-invalid': form.errors.has('username') }">
                         <has-error :form="form" field="username"></has-error>
                    </div>

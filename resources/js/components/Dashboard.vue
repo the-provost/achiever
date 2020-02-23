@@ -88,7 +88,7 @@
 
 <div class="row">
   <div class="col-md-6 col-sm-6 col-12">
-  <div class="info-box">
+  <div class="info-box border-none shadow-none">
     <span class="info-box-icon pbar3"><i class="fas fa-thumbs-up"></i></span>
     <div class="info-box-content">
       <span class="info-box-text">Messages</span>
@@ -97,8 +97,8 @@
   </div>
 </div>
 <div class="col-md-6 col-sm-6 col-12">
-  <div class="info-box">
-    <span class="info-box-icon pbar3">&nbsp;<i class="fas fa-thumbs-up"></i>&nbsp;<i class="fas fa-thumbs-up"></i>&nbsp;</span>
+  <div class="info-box border-none shadow-none">
+    <span class="info-box-icon pbar3">&nbsp;<i class="fas fa-medal"></i>&nbsp;</span>
     <div class="info-box-content">
       <span class="info-box-text">Messages</span>
       <span class="info-box-number">1,410</span>
