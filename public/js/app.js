@@ -14318,6 +14318,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -52958,8 +52960,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
-        _c("div", { staticClass: "info-box pbar7 shadow-none" }, [
+      _c("div", { staticClass: "col-md-4 col-sm-6 col-12" }, [
+        _c("div", { staticClass: "info-box aor shadow-none" }, [
           _c("span", { staticClass: "info-box-icon" }, [
             _c("i", { staticClass: "fas fa-crosshairs" })
           ]),
@@ -52983,8 +52985,8 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
-        _c("div", { staticClass: "info-box pbar7 shadow-none" }, [
+      _c("div", { staticClass: "col-md-4 col-sm-6 col-12" }, [
+        _c("div", { staticClass: "info-box aor shadow-none" }, [
           _c("span", { staticClass: "info-box-icon" }, [
             _c("i", { staticClass: "fas fa-tasks" })
           ]),
@@ -53008,35 +53010,8 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
-        _c("div", { staticClass: "info-box pbar7 shadow-none" }, [
-          _c("span", { staticClass: "info-box-icon" }, [
-            _c("i", { staticClass: "fas fa-calendar-check" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "info-box-content" }, [
-            _c("span", { staticClass: "info-box-text" }, [
-              _vm._v("Accomplished")
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "info-box-number" }, [_vm._v("41,410")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "progress" }, [
-              _c("div", {
-                staticClass: "progress-bar",
-                staticStyle: { width: "70%" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "progress-description" }, [
-              _vm._v("\n          70% Increase in 30 Days\n        ")
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-3 col-sm-6 col-12" }, [
-        _c("div", { staticClass: "info-box pbar7 shadow-none" }, [
+      _c("div", { staticClass: "col-md-4 col-sm-6 col-12" }, [
+        _c("div", { staticClass: "info-box aor shadow-none" }, [
           _c("span", { staticClass: "info-box-icon" }, [
             _c("i", { staticClass: "fas fa-spinner" })
           ]),
@@ -53068,7 +53043,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-6 col-sm-6 col-12" }, [
         _c("div", { staticClass: "info-box border-none shadow-none" }, [
-          _c("span", { staticClass: "info-box-icon pbar3" }, [
+          _c("span", { staticClass: "info-box-icon aor" }, [
             _c("i", { staticClass: "fas fa-thumbs-up" })
           ]),
           _vm._v(" "),
@@ -53082,7 +53057,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "col-md-6 col-sm-6 col-12" }, [
         _c("div", { staticClass: "info-box border-none shadow-none" }, [
-          _c("span", { staticClass: "info-box-icon pbar3" }, [
+          _c("span", { staticClass: "info-box-icon aor" }, [
             _vm._v(" "),
             _c("i", { staticClass: "fas fa-medal" }),
             _vm._v(" ")
@@ -53575,7 +53550,7 @@ var staticRenderFns = [
                         _c(
                           "button",
                           {
-                            staticClass: "btn btn-block pbar7 btn-large",
+                            staticClass: "btn btn-block aor btn-large",
                             staticStyle: { width: "70%" },
                             attrs: {
                               type: "button",
@@ -53604,7 +53579,7 @@ var staticRenderFns = [
                         _c(
                           "button",
                           {
-                            staticClass: "btn btn-block pbar7 btn-large",
+                            staticClass: "btn btn-block aor btn-large",
                             staticStyle: { width: "70%" },
                             attrs: {
                               type: "button",
@@ -53625,6 +53600,8 @@ var staticRenderFns = [
                 _c("br")
               ]
             ),
+            _vm._v(" "),
+            _c("br"),
             _vm._v(" "),
             _c("br"),
             _vm._v(" "),
@@ -53688,7 +53665,7 @@ var staticRenderFns = [
                                     _c(
                                       "button",
                                       {
-                                        staticClass: "btn pbar7",
+                                        staticClass: "btn aor",
                                         staticStyle: { width: "100%" },
                                         attrs: { type: "button" }
                                       },
@@ -53698,7 +53675,7 @@ var staticRenderFns = [
                                     _c(
                                       "button",
                                       {
-                                        staticClass: "btn pbar7",
+                                        staticClass: "btn aor",
                                         staticStyle: { width: "100%" },
                                         attrs: {
                                           type: "button",
@@ -53712,7 +53689,7 @@ var staticRenderFns = [
                                     _c(
                                       "button",
                                       {
-                                        staticClass: "btn pbar7",
+                                        staticClass: "btn aor",
                                         staticStyle: { width: "100%" },
                                         attrs: {
                                           type: "button",
@@ -53734,7 +53711,7 @@ var staticRenderFns = [
                                     _c(
                                       "button",
                                       {
-                                        staticClass: "btn pbar7",
+                                        staticClass: "btn aor",
                                         staticStyle: { width: "100%" },
                                         attrs: {
                                           type: "button",

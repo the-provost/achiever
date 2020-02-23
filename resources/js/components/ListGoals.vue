@@ -51,11 +51,11 @@
 <div class="row justify-content-center center-block" align="center" style="width:100%;">
 <div class="col-md-10 d-flex justify-content-center center-block" align="center">
     <div class="col-md-5 justify-content-center center-block pt-4 pb-0" align="center">
-         <button type="button" class="btn btn-block pbar7 btn-large" data-toggle="modal" data-target="#addGoalModal" style="width:70%;"><i class="fas fa-plus"></i> New Goal</button>
+         <button type="button" class="btn btn-block aor btn-large" data-toggle="modal" data-target="#addGoalModal" style="width:70%;"><i class="fas fa-plus"></i> New Goal</button>
     </div>
     <br>
     <div class="col-md-5 justify-content-center center-block pt-4 pb-0" align="center">
-        <button type="button" class="btn btn-block pbar7 btn-large" data-toggle="modal" data-target="#addGoalModal" style="width:70%;"><i class="fas fa-search"></i> Filter 'em</button>
+        <button type="button" class="btn btn-block aor btn-large" data-toggle="modal" data-target="#addGoalModal" style="width:70%;"><i class="fas fa-search"></i> Filter 'em</button>
     </div>
 </div>
 <br>
@@ -64,6 +64,8 @@
 
 <br>
 <br>
+<br>
+
 
 <!-- list items main -->
 <div class="row justify-content-center center-block">
@@ -90,17 +92,17 @@
            <div class="col-md-12 d-flex">
            <div class="col-md-2 d-flex">
              <div class="btn-group">
-           <button type="button" class="btn pbar7" style="width:100%; ">
+           <button type="button" class="btn aor" style="width:100%; ">
              Tasks</button>
-           <button type="button" class="btn pbar7" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
+           <button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
            <i class="fas fa-plus"></i></button>
-           <button type="button" class="btn pbar7" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
+           <button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
            <i class="fas fa-list"></i></button>
            </div>
            </div>
            <br>
            <div class="col-md-2 d-flex ml-4">
-             <button type="button" class="btn pbar7" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
+             <button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
            <i class="far fa-edit"></i>&nbsp;Edit</button>
            </div>
            <br>

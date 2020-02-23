@@ -52940,6 +52940,10 @@ readers do not read off random characters that represent icons */
   background-color: #ff9b14 !important;
 }
 
+.aor {
+  background-color: #ffc107 !important;
+}
+
 .goalbox {
   background-color: white !important;
   height: auto !important;

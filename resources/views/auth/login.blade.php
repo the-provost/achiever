@@ -54,7 +54,7 @@
 
                         <div class="form-group row mb-0 justify-content-center center-block" align="center">
                             <div class="col-md-10 ">
-                                <button type="submit" class="btn btn-warning">
+                                <button type="submit" class="btn aor">
                                     {{ __('Login') }}
                                 </button>
 

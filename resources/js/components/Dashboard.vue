@@ -21,8 +21,8 @@
     <section class="content">
 
      <div class="row">
- <div class="col-md-3 col-sm-6 col-12">
-    <div class="info-box pbar7 shadow-none">
+ <div class="col-md-4 col-sm-6 col-12">
+    <div class="info-box aor shadow-none">
       <span class="info-box-icon"><i class="fas fa-crosshairs"></i></span>
       <div class="info-box-content">
         <span class="info-box-text">Goals</span>
@@ -36,8 +36,8 @@
       </div>
     </div>
   </div>
- <div class="col-md-3 col-sm-6 col-12">
-    <div class="info-box pbar7 shadow-none">
+ <div class="col-md-4 col-sm-6 col-12">
+    <div class="info-box aor shadow-none">
       <span class="info-box-icon"><i class="fas fa-tasks"></i></span>
       <div class="info-box-content">
         <span class="info-box-text">Tasks</span>
@@ -51,8 +51,8 @@
       </div>
     </div>
   </div>
-  <div class="col-md-3 col-sm-6 col-12">
-    <div class="info-box pbar7 shadow-none">
+  <!-- <div class="col-md-3 col-sm-6 col-12">
+    <div class="info-box aor shadow-none">
       <span class="info-box-icon"><i class="fas fa-calendar-check"></i></span>
       <div class="info-box-content">
         <span class="info-box-text">Accomplished</span>
@@ -65,9 +65,9 @@
         </span>
       </div>
     </div>
-  </div>
-  <div class="col-md-3 col-sm-6 col-12">
-    <div class="info-box pbar7 shadow-none">
+  </div> -->
+  <div class="col-md-4 col-sm-6 col-12">
+    <div class="info-box aor shadow-none">
       <span class="info-box-icon"><i class="fas fa-spinner"></i></span>
       <div class="info-box-content">
         <span class="info-box-text">Progress</span>
@@ -89,7 +89,7 @@
 <div class="row">
   <div class="col-md-6 col-sm-6 col-12">
   <div class="info-box border-none shadow-none">
-    <span class="info-box-icon pbar3"><i class="fas fa-thumbs-up"></i></span>
+    <span class="info-box-icon aor"><i class="fas fa-thumbs-up"></i></span>
     <div class="info-box-content">
       <span class="info-box-text">Messages</span>
       <span class="info-box-number">1,410</span>
@@ -98,7 +98,7 @@
 </div>
 <div class="col-md-6 col-sm-6 col-12">
   <div class="info-box border-none shadow-none">
-    <span class="info-box-icon pbar3">&nbsp;<i class="fas fa-medal"></i>&nbsp;</span>
+    <span class="info-box-icon aor">&nbsp;<i class="fas fa-medal"></i>&nbsp;</span>
     <div class="info-box-content">
       <span class="info-box-text">Messages</span>
       <span class="info-box-number">1,410</span>
