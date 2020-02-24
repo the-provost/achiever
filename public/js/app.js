@@ -14324,6 +14324,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -53437,7 +53438,7 @@ var render = function() {
                             _c("div", { staticClass: "card-body" }, [
                               _c("div", { staticClass: "row" }, [
                                 _c("div", { staticClass: "col-md-12" }, [
-                                  _c("h5", { staticClass: "card-title" }, [
+                                  _c("h1", { staticClass: "card-title" }, [
                                     _vm._v(_vm._s(goal.title))
                                   ]),
                                   _vm._v(" "),
@@ -53569,8 +53570,9 @@ var render = function() {
                                                       pbar1: goal.priority == 1,
                                                       pbar0: goal.priority == 0
                                                     },
-                                                    staticStyle: {
-                                                      width: "60%"
+                                                    style: {
+                                                      width:
+                                                        goal.percentage + "%"
                                                     },
                                                     attrs: {
                                                       role: "progressbar",

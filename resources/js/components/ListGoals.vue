@@ -78,7 +78,7 @@
      <div class="card-body">
        <div class="row">
          <div class="col-md-12">
-           <h5 class="card-title">{{goal.title}}</h5>
+           <h1 class="card-title">{{goal.title}}</h1>
            <p class="card-text">
              {{goal.description}}
            </p>
@@ -118,7 +118,8 @@
            <div class="col-md-6 pt-2">
              <div class="progress progress-xss">
                   <div class="progress-bar progress-bar-striped" :class="{pbar10: goal.priority == 10, pbar9: goal.priority == 9, pbar8: goal.priority == 8, pbar7: goal.priority == 7, pbar6: goal.priority == 6, pbar5: goal.priority == 5, pbar4: goal.priority == 4, pbar3: goal.priority == 3, pbar2: goal.priority == 2, pbar1: goal.priority == 1, pbar0: goal.priority == 0}"
-                  role="progressbar" v-bind:aria-valuenow="goal.percentage" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                  role="progressbar" v-bind:aria-valuenow="goal.percentage" aria-valuemin="0" aria-valuemax="100" :style="{ width: goal.percentage + '%' }">
+                  <!-- :style="{ width: goal.percentage + '%' }"> -->
                     <span class="sr-only">{{goal.percentage}}% Complete (warning)</span>
                   </div>
                 </div>
