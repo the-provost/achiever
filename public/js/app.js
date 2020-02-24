@@ -14320,6 +14320,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -53353,6 +53354,8 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("add-goal"),
+      _vm._v(" "),
+      _c("add-task"),
       _vm._v(" "),
       _vm._m(1),
       _vm._v(" "),

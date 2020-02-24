@@ -17,6 +17,7 @@
       </section>
 
       <add-goal></add-goal>
+      <add-task></add-task>
 
     <!-- Main content -->
     <section class="content justify-content-center align-center">
