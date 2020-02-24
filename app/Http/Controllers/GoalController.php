@@ -28,7 +28,7 @@ class GoalController extends Controller
      */
     public function index()
     {
-        //
+        return Goal::all();
     }
 
     /**
@@ -49,26 +49,24 @@ class GoalController extends Controller
      */
     public function store(Request $request)
     {
-        // $this->validate($request,[
+        $this->validate($request,[
 
-        //     "user_id" => ["required"],
-        //     "term" => ["required","string"],
-        //     "description" => ["required","string"],
-        //     "title" => ["required",'string'],
-        //     "priority" => ["required",'numeric'],
+            "term" => ["required","string"],
+            "description" => ["required","string"],
+            "title" => ["required",'string']
 
-        // ]);
+        ]);
 
         Goal::create([
             "user_id" => Auth::id(),
-            "title" => $request->get('title'),
-            "description" => $request->get('description'),
-            "planned_start" => $request->get('plannedstart'),
-            "planned_end" => $request->get('plannedend'),
-            "term" => $request->get('term'),
-            "priority" => $request->get('priority')
-
+            "title" => $request('title'),
+            "description" => $request('description'),
+            "planned_start" => $request('plannedstart'),
+            "planned_end" => $request('plannedend'),
+            "term" => $request('term'),
+            "priority" => $request('priority')
         ]);
+
     }
 
     /**

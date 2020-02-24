@@ -74,14 +74,13 @@
 
 
 <!-- list item divs -->
-<div class="card card-primary card-outline shadow-none">
+<div class="card card-primary card-outline shadow-none" v-for="goal in  goals" :key="goal.id">
      <div class="card-body">
        <div class="row">
          <div class="col-md-12">
-           <h5 class="card-title">Card title</h5>
+           <h5 class="card-title">{{goal.title}}</h5>
            <p class="card-text">
-             Some quick example text to build on the card title and make up the bulk of the card's
-             content.
+             {{goal.description}}
            </p>
            <a href="#" class="card-link">Card link</a>
            <a href="#" class="card-link">Another link</a>
@@ -109,14 +108,18 @@
            <br>
            <div class="col-md-1 d-flex">
            <div class="priority-unit d-flex pt-0 pl-4">
-           <div class="priority-circle pbar10" style="height:30px; width:30px; border-radius:100%;"></div>
+             <!-- justify-content-center center-block" align="center" style="width:100%;"> -->
+           <div class="priority-circle justify-content-center center-block pt-1" align="center" :class="{pbar10: goal.priority == 10, pbar9: goal.priority == 9, pbar8: goal.priority == 8, pbar7: goal.priority == 7, pbar6: goal.priority == 6, pbar5: goal.priority == 5, pbar4: goal.priority == 4, pbar3: goal.priority == 3, pbar2: goal.priority == 2, pbar1: goal.priority == 1, pbar0: goal.priority == 0}" 
+           style="height:30px; width:30px; border-radius:100%;">{{goal.priority}}</div>
+           <!-- dynamic class association https://stackoverflow.com/questions/49346904/how-to-apply-dynamic-css-class-in-v-for-according-to-the-value-of-the-element  -->
            </div>
            </div>           
            <br>
            <div class="col-md-6 pt-2">
              <div class="progress progress-xss">
-                  <div class="progress-bar pbar10 progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    <span class="sr-only">60% Complete (warning)</span>
+                  <div class="progress-bar progress-bar-striped" :class="{pbar10: goal.priority == 10, pbar9: goal.priority == 9, pbar8: goal.priority == 8, pbar7: goal.priority == 7, pbar6: goal.priority == 6, pbar5: goal.priority == 5, pbar4: goal.priority == 4, pbar3: goal.priority == 3, pbar2: goal.priority == 2, pbar1: goal.priority == 1, pbar0: goal.priority == 0}"
+                  role="progressbar" v-bind:aria-valuenow="goal.percentage" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                    <span class="sr-only">{{goal.percentage}}% Complete (warning)</span>
                   </div>
                 </div>
            </div>
@@ -235,7 +238,9 @@
      export default {
         data (){
             return{
-                form: new Form({
+              goals: {}, 
+              // goals object so curly brackets
+              form: new Form({
                     title:'',
                     description:'',
                     plannedstart:'',
@@ -246,12 +251,18 @@
             }
         },
         methods: {
+          loadGoals(){
+            axios.get("goal").then(({data}) => (this.goals = data));
+            // funtion ({data}) that stores the axios data into a goals object here 
+          },
           createGoal(){
             this.form.post('goal');
           },
         },
         mounted() {
-            console.log('Component mounted.')
+            this.loadGoals();
+            // calling the method to load all goals from table
+            console.log('Loading Goals...');
         }
     }
 </script>

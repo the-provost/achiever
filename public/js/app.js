@@ -14321,9 +14321,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      goals: {},
+      // goals object so curly brackets
       form: new Form({
         title: '',
         description: '',
@@ -14335,12 +14340,22 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    loadGoals: function loadGoals() {
+      var _this = this;
+
+      axios.get("goal").then(function (_ref) {
+        var data = _ref.data;
+        return _this.goals = data;
+      }); // funtion ({data}) that stores the axios data into a goals object here 
+    },
     createGoal: function createGoal() {
       this.form.post('goal');
     }
   },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    this.loadGoals(); // calling the method to load all goals from table
+
+    console.log('Loading Goals...');
   }
 });
 
@@ -53382,468 +53397,55 @@ var render = function() {
       _vm._v(" "),
       _c("add-task"),
       _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br")
-    ],
-    1
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "breadcrumb-item" }, [
-      _c("a", { attrs: { href: "/home" } }, [_vm._v("Home")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      { staticClass: "content justify-content-center align-center" },
-      [
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _c("div", { staticClass: "col-md-12" }, [
-            _c("br"),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "row col-md-12", attrs: { align: "center" } },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "col-md-12 row justify-content-center center-block",
-                    attrs: { align: "center" }
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-md-2 d-flex pt-2",
-                        staticStyle: { display: "block" }
-                      },
-                      [_c("h4", [_vm._v("PRIORITY CHART")])]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "pbar1 col-md-1 d-flex justify-content-center pt-2 center-block",
-                        staticStyle: { display: "block" }
-                      },
-                      [_vm._v("1")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "pbar2 col-md-1 d-flex justify-content-center pt-2 center-block",
-                        staticStyle: { display: "block" }
-                      },
-                      [_vm._v("2")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "pbar3 col-md-1 d-flex justify-content-center pt-2 center-block",
-                        staticStyle: { display: "block" }
-                      },
-                      [_vm._v("3")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "pbar4 col-md-1 d-flex justify-content-center pt-2 center-block",
-                        staticStyle: { display: "block" }
-                      },
-                      [_vm._v("4")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "pbar5 col-md-1 d-flex justify-content-center pt-2 center-block",
-                        staticStyle: { display: "block" }
-                      },
-                      [_vm._v("5")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "pbar6 col-md-1 d-flex justify-content-center pt-2 center-block",
-                        staticStyle: { display: "block" }
-                      },
-                      [_vm._v("6")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "pbar7 col-md-1 d-flex justify-content-center pt-2 center-block",
-                        staticStyle: { display: "block" }
-                      },
-                      [_vm._v("7")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "pbar8 col-md-1 d-flex justify-content-center pt-2 center-block",
-                        staticStyle: { display: "block" }
-                      },
-                      [_vm._v("8")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "pbar9 col-md-1 d-flex justify-content-center pt-2 center-block",
-                        staticStyle: { display: "block" }
-                      },
-                      [_vm._v("9")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "pbar10 col-md-1 d-flex justify-content-center pt-2 center-block",
-                        staticStyle: { display: "block" }
-                      },
-                      [_vm._v("10")]
-                    )
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "row justify-content-center center-block",
-                staticStyle: { width: "100%" },
-                attrs: { align: "center" }
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "col-md-10 d-flex justify-content-center center-block",
-                    attrs: { align: "center" }
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-md-5 justify-content-center center-block pt-4 pb-0",
-                        attrs: { align: "center" }
-                      },
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-block aor btn-large",
-                            staticStyle: { width: "70%" },
-                            attrs: {
-                              type: "button",
-                              "data-toggle": "modal",
-                              "data-target": "#addGoalModal"
-                            }
-                          },
-                          [
-                            _c("i", { staticClass: "fas fa-plus" }),
-                            _vm._v(" New Goal")
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("br"),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-md-5 justify-content-center center-block pt-4 pb-0",
-                        attrs: { align: "center" }
-                      },
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-block aor btn-large",
-                            staticStyle: { width: "70%" },
-                            attrs: {
-                              type: "button",
-                              "data-toggle": "modal",
-                              "data-target": "#addGoalModal"
-                            }
-                          },
-                          [
-                            _c("i", { staticClass: "fas fa-search" }),
-                            _vm._v(" Filter 'em")
-                          ]
-                        )
-                      ]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("br")
-              ]
-            ),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "row justify-content-center center-block" },
-              [
-                _c("div", { staticClass: "col-sm-10" }, [
+      _c(
+        "section",
+        { staticClass: "content justify-content-center align-center" },
+        [
+          _c("div", { staticClass: "row justify-content-center" }, [
+            _c("div", { staticClass: "col-md-12" }, [
+              _c("br"),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "row justify-content-center center-block" },
+                [
                   _c(
                     "div",
-                    {
-                      staticClass: "card card-primary card-outline shadow-none"
-                    },
+                    { staticClass: "col-sm-10" },
                     [
-                      _c("div", { staticClass: "card-body" }, [
-                        _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "col-md-12" }, [
-                            _c("h5", { staticClass: "card-title" }, [
-                              _vm._v("Card title")
-                            ]),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "card-text" }, [
-                              _vm._v(
-                                "\n             Some quick example text to build on the card title and make up the bulk of the card's\n             content.\n           "
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "card-link",
-                                attrs: { href: "#" }
-                              },
-                              [_vm._v("Card link")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "card-link",
-                                attrs: { href: "#" }
-                              },
-                              [_vm._v("Another link")]
-                            ),
-                            _vm._v(" "),
-                            _c("br")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass: "row",
-                              staticStyle: { width: "100%" }
-                            },
-                            [
-                              _c("div", { staticClass: "col-md-12 d-flex" }, [
-                                _c("div", { staticClass: "col-md-2 d-flex" }, [
-                                  _c("div", { staticClass: "btn-group" }, [
-                                    _c(
-                                      "button",
-                                      {
-                                        staticClass: "btn aor",
-                                        staticStyle: { width: "100%" },
-                                        attrs: { type: "button" }
-                                      },
-                                      [_vm._v("\n             Tasks")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "button",
-                                      {
-                                        staticClass: "btn aor",
-                                        staticStyle: { width: "100%" },
-                                        attrs: {
-                                          type: "button",
-                                          "data-toggle": "modal",
-                                          "data-target": "#addTaskModal"
-                                        }
-                                      },
-                                      [_c("i", { staticClass: "fas fa-plus" })]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "button",
-                                      {
-                                        staticClass: "btn aor",
-                                        staticStyle: { width: "100%" },
-                                        attrs: {
-                                          type: "button",
-                                          "data-toggle": "modal",
-                                          "data-target": "#addTaskModal"
-                                        }
-                                      },
-                                      [_c("i", { staticClass: "fas fa-list" })]
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("br"),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "col-md-2 d-flex ml-4" },
-                                  [
-                                    _c(
-                                      "button",
-                                      {
-                                        staticClass: "btn aor",
-                                        staticStyle: { width: "100%" },
-                                        attrs: {
-                                          type: "button",
-                                          "data-toggle": "modal",
-                                          "data-target": "#addTaskModal"
-                                        }
-                                      },
-                                      [
-                                        _c("i", { staticClass: "far fa-edit" }),
-                                        _vm._v(" Edit")
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c("br"),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "col-md-1 d-flex" }, [
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "priority-unit d-flex pt-0 pl-4"
-                                    },
-                                    [
-                                      _c("div", {
-                                        staticClass: "priority-circle pbar10",
-                                        staticStyle: {
-                                          height: "30px",
-                                          width: "30px",
-                                          "border-radius": "100%"
-                                        }
-                                      })
-                                    ]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("br"),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "col-md-6 pt-2" }, [
-                                  _c(
-                                    "div",
-                                    { staticClass: "progress progress-xss" },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "progress-bar pbar10 progress-bar-striped",
-                                          staticStyle: { width: "60%" },
-                                          attrs: {
-                                            role: "progressbar",
-                                            "aria-valuenow": "60",
-                                            "aria-valuemin": "0",
-                                            "aria-valuemax": "100"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "span",
-                                            { staticClass: "sr-only" },
-                                            [_vm._v("60% Complete (warning)")]
-                                          )
-                                        ]
-                                      )
-                                    ]
-                                  )
-                                ])
-                              ])
-                            ]
-                          )
-                        ])
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "taskrow" }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-md-11 justify-content-center center-block"
-                      },
-                      [
-                        _c(
+                      _vm._l(_vm.goals, function(goal) {
+                        return _c(
                           "div",
                           {
+                            key: goal.id,
                             staticClass:
-                              "card card-warning card-outline-warning shadow-none",
-                            staticStyle: {
-                              "background-color": "rgba(250, 218, 136, 0.34)"
-                            }
+                              "card card-primary card-outline shadow-none"
                           },
                           [
                             _c("div", { staticClass: "card-body" }, [
                               _c("div", { staticClass: "row" }, [
                                 _c("div", { staticClass: "col-md-12" }, [
                                   _c("h5", { staticClass: "card-title" }, [
-                                    _vm._v("Card title")
+                                    _vm._v(_vm._s(goal.title))
                                   ]),
                                   _vm._v(" "),
                                   _c("p", { staticClass: "card-text" }, [
                                     _vm._v(
-                                      "\n             Some quick example text to build on the card title and make up the bulk of the card's\n             content.\n           "
+                                      "\n             " +
+                                        _vm._s(goal.description) +
+                                        "\n           "
                                     )
                                   ]),
                                   _vm._v(" "),
@@ -53879,88 +53481,17 @@ var staticRenderFns = [
                                       "div",
                                       { staticClass: "col-md-12 d-flex" },
                                       [
-                                        _c(
-                                          "div",
-                                          { staticClass: "col-md-2 d-flex" },
-                                          [
-                                            _c(
-                                              "div",
-                                              { staticClass: "btn-group" },
-                                              [
-                                                _c(
-                                                  "button",
-                                                  {
-                                                    staticClass: "btn pbar7",
-                                                    staticStyle: {
-                                                      width: "100%"
-                                                    },
-                                                    attrs: {
-                                                      type: "button",
-                                                      "data-toggle": "modal",
-                                                      "data-target":
-                                                        "#addTaskModal"
-                                                    }
-                                                  },
-                                                  [
-                                                    _c("i", {
-                                                      staticClass: "fas fa-edit"
-                                                    })
-                                                  ]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "button",
-                                                  {
-                                                    staticClass: "btn pbar7",
-                                                    staticStyle: {
-                                                      width: "100%"
-                                                    },
-                                                    attrs: {
-                                                      type: "button",
-                                                      "data-toggle": "modal",
-                                                      "data-target":
-                                                        "#addTaskModal"
-                                                    }
-                                                  },
-                                                  [
-                                                    _c("i", {
-                                                      staticClass:
-                                                        "fas fa-trash"
-                                                    })
-                                                  ]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "button",
-                                                  {
-                                                    staticClass: "btn pbar7",
-                                                    staticStyle: {
-                                                      width: "100%"
-                                                    },
-                                                    attrs: {
-                                                      type: "button",
-                                                      "data-toggle": "modal",
-                                                      "data-target":
-                                                        "#addTaskModal"
-                                                    }
-                                                  },
-                                                  [
-                                                    _c("i", {
-                                                      staticClass:
-                                                        "fas fa-exchange-alt"
-                                                    })
-                                                  ]
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        ),
+                                        _vm._m(3, true),
+                                        _vm._v(" "),
+                                        _c("br"),
+                                        _vm._v(" "),
+                                        _vm._m(4, true),
                                         _vm._v(" "),
                                         _c("br"),
                                         _vm._v(" "),
                                         _c(
                                           "div",
-                                          { staticClass: "col-md-4 d-flex" },
+                                          { staticClass: "col-md-1 d-flex" },
                                           [
                                             _c(
                                               "div",
@@ -53969,15 +53500,38 @@ var staticRenderFns = [
                                                   "priority-unit d-flex pt-0 pl-4"
                                               },
                                               [
-                                                _c("div", {
-                                                  staticClass:
-                                                    "priority-circle pbar10",
-                                                  staticStyle: {
-                                                    height: "30px",
-                                                    width: "30px",
-                                                    "border-radius": "100%"
-                                                  }
-                                                })
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "priority-circle justify-content-center center-block pt-1",
+                                                    class: {
+                                                      pbar10:
+                                                        goal.priority == 10,
+                                                      pbar9: goal.priority == 9,
+                                                      pbar8: goal.priority == 8,
+                                                      pbar7: goal.priority == 7,
+                                                      pbar6: goal.priority == 6,
+                                                      pbar5: goal.priority == 5,
+                                                      pbar4: goal.priority == 4,
+                                                      pbar3: goal.priority == 3,
+                                                      pbar2: goal.priority == 2,
+                                                      pbar1: goal.priority == 1,
+                                                      pbar0: goal.priority == 0
+                                                    },
+                                                    staticStyle: {
+                                                      height: "30px",
+                                                      width: "30px",
+                                                      "border-radius": "100%"
+                                                    },
+                                                    attrs: { align: "center" }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      _vm._s(goal.priority)
+                                                    )
+                                                  ]
+                                                )
                                               ]
                                             )
                                           ]
@@ -54000,13 +53554,28 @@ var staticRenderFns = [
                                                   "div",
                                                   {
                                                     staticClass:
-                                                      "progress-bar pbar7 progress-bar-striped",
+                                                      "progress-bar progress-bar-striped",
+                                                    class: {
+                                                      pbar10:
+                                                        goal.priority == 10,
+                                                      pbar9: goal.priority == 9,
+                                                      pbar8: goal.priority == 8,
+                                                      pbar7: goal.priority == 7,
+                                                      pbar6: goal.priority == 6,
+                                                      pbar5: goal.priority == 5,
+                                                      pbar4: goal.priority == 4,
+                                                      pbar3: goal.priority == 3,
+                                                      pbar2: goal.priority == 2,
+                                                      pbar1: goal.priority == 1,
+                                                      pbar0: goal.priority == 0
+                                                    },
                                                     staticStyle: {
                                                       width: "60%"
                                                     },
                                                     attrs: {
                                                       role: "progressbar",
-                                                      "aria-valuenow": "60",
+                                                      "aria-valuenow":
+                                                        goal.percentage,
                                                       "aria-valuemin": "0",
                                                       "aria-valuemax": "100"
                                                     }
@@ -54019,7 +53588,10 @@ var staticRenderFns = [
                                                       },
                                                       [
                                                         _vm._v(
-                                                          "60% Complete (warning)"
+                                                          _vm._s(
+                                                            goal.percentage
+                                                          ) +
+                                                            "% Complete (warning)"
                                                         )
                                                       ]
                                                     )
@@ -54037,18 +53609,470 @@ var staticRenderFns = [
                             ])
                           ]
                         )
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("br")
-                ])
-              ]
-            )
+                      }),
+                      _vm._v(" "),
+                      _vm._m(5),
+                      _vm._v(" "),
+                      _c("br")
+                    ],
+                    2
+                  )
+                ]
+              )
+            ])
           ])
-        ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _vm._m(6),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br")
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "breadcrumb-item" }, [
+      _c("a", { attrs: { href: "/home" } }, [_vm._v("Home")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "row col-md-12", attrs: { align: "center" } },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "col-md-12 row justify-content-center center-block",
+            attrs: { align: "center" }
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "col-md-2 d-flex pt-2",
+                staticStyle: { display: "block" }
+              },
+              [_c("h4", [_vm._v("PRIORITY CHART")])]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pbar1 col-md-1 d-flex justify-content-center pt-2 center-block",
+                staticStyle: { display: "block" }
+              },
+              [_vm._v("1")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pbar2 col-md-1 d-flex justify-content-center pt-2 center-block",
+                staticStyle: { display: "block" }
+              },
+              [_vm._v("2")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pbar3 col-md-1 d-flex justify-content-center pt-2 center-block",
+                staticStyle: { display: "block" }
+              },
+              [_vm._v("3")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pbar4 col-md-1 d-flex justify-content-center pt-2 center-block",
+                staticStyle: { display: "block" }
+              },
+              [_vm._v("4")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pbar5 col-md-1 d-flex justify-content-center pt-2 center-block",
+                staticStyle: { display: "block" }
+              },
+              [_vm._v("5")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pbar6 col-md-1 d-flex justify-content-center pt-2 center-block",
+                staticStyle: { display: "block" }
+              },
+              [_vm._v("6")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pbar7 col-md-1 d-flex justify-content-center pt-2 center-block",
+                staticStyle: { display: "block" }
+              },
+              [_vm._v("7")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pbar8 col-md-1 d-flex justify-content-center pt-2 center-block",
+                staticStyle: { display: "block" }
+              },
+              [_vm._v("8")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pbar9 col-md-1 d-flex justify-content-center pt-2 center-block",
+                staticStyle: { display: "block" }
+              },
+              [_vm._v("9")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pbar10 col-md-1 d-flex justify-content-center pt-2 center-block",
+                staticStyle: { display: "block" }
+              },
+              [_vm._v("10")]
+            )
+          ]
+        )
       ]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "row justify-content-center center-block",
+        staticStyle: { width: "100%" },
+        attrs: { align: "center" }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "col-md-10 d-flex justify-content-center center-block",
+            attrs: { align: "center" }
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-md-5 justify-content-center center-block pt-4 pb-0",
+                attrs: { align: "center" }
+              },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-block aor btn-large",
+                    staticStyle: { width: "70%" },
+                    attrs: {
+                      type: "button",
+                      "data-toggle": "modal",
+                      "data-target": "#addGoalModal"
+                    }
+                  },
+                  [_c("i", { staticClass: "fas fa-plus" }), _vm._v(" New Goal")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-md-5 justify-content-center center-block pt-4 pb-0",
+                attrs: { align: "center" }
+              },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-block aor btn-large",
+                    staticStyle: { width: "70%" },
+                    attrs: {
+                      type: "button",
+                      "data-toggle": "modal",
+                      "data-target": "#addGoalModal"
+                    }
+                  },
+                  [
+                    _c("i", { staticClass: "fas fa-search" }),
+                    _vm._v(" Filter 'em")
+                  ]
+                )
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("br")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-2 d-flex" }, [
+      _c("div", { staticClass: "btn-group" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn aor",
+            staticStyle: { width: "100%" },
+            attrs: { type: "button" }
+          },
+          [_vm._v("\n             Tasks")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn aor",
+            staticStyle: { width: "100%" },
+            attrs: {
+              type: "button",
+              "data-toggle": "modal",
+              "data-target": "#addTaskModal"
+            }
+          },
+          [_c("i", { staticClass: "fas fa-plus" })]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn aor",
+            staticStyle: { width: "100%" },
+            attrs: {
+              type: "button",
+              "data-toggle": "modal",
+              "data-target": "#addTaskModal"
+            }
+          },
+          [_c("i", { staticClass: "fas fa-list" })]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-2 d-flex ml-4" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn aor",
+          staticStyle: { width: "100%" },
+          attrs: {
+            type: "button",
+            "data-toggle": "modal",
+            "data-target": "#addTaskModal"
+          }
+        },
+        [_c("i", { staticClass: "far fa-edit" }), _vm._v(" Edit")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "taskrow" }, [
+      _c(
+        "div",
+        { staticClass: "col-md-11 justify-content-center center-block" },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "card card-warning card-outline-warning shadow-none",
+              staticStyle: { "background-color": "rgba(250, 218, 136, 0.34)" }
+            },
+            [
+              _c("div", { staticClass: "card-body" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("h5", { staticClass: "card-title" }, [
+                      _vm._v("Card title")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [
+                      _vm._v(
+                        "\n             Some quick example text to build on the card title and make up the bulk of the card's\n             content.\n           "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "card-link", attrs: { href: "#" } },
+                      [_vm._v("Card link")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "card-link", attrs: { href: "#" } },
+                      [_vm._v("Another link")]
+                    ),
+                    _vm._v(" "),
+                    _c("br")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "row", staticStyle: { width: "100%" } },
+                    [
+                      _c("div", { staticClass: "col-md-12 d-flex" }, [
+                        _c("div", { staticClass: "col-md-2 d-flex" }, [
+                          _c("div", { staticClass: "btn-group" }, [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn pbar7",
+                                staticStyle: { width: "100%" },
+                                attrs: {
+                                  type: "button",
+                                  "data-toggle": "modal",
+                                  "data-target": "#addTaskModal"
+                                }
+                              },
+                              [_c("i", { staticClass: "fas fa-edit" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn pbar7",
+                                staticStyle: { width: "100%" },
+                                attrs: {
+                                  type: "button",
+                                  "data-toggle": "modal",
+                                  "data-target": "#addTaskModal"
+                                }
+                              },
+                              [_c("i", { staticClass: "fas fa-trash" })]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn pbar7",
+                                staticStyle: { width: "100%" },
+                                attrs: {
+                                  type: "button",
+                                  "data-toggle": "modal",
+                                  "data-target": "#addTaskModal"
+                                }
+                              },
+                              [_c("i", { staticClass: "fas fa-exchange-alt" })]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-md-4 d-flex" }, [
+                          _c(
+                            "div",
+                            { staticClass: "priority-unit d-flex pt-0 pl-4" },
+                            [
+                              _c("div", {
+                                staticClass: "priority-circle pbar10",
+                                staticStyle: {
+                                  height: "30px",
+                                  width: "30px",
+                                  "border-radius": "100%"
+                                }
+                              })
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-md-6 pt-2" }, [
+                          _c("div", { staticClass: "progress progress-xss" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "progress-bar pbar7 progress-bar-striped",
+                                staticStyle: { width: "60%" },
+                                attrs: {
+                                  role: "progressbar",
+                                  "aria-valuenow": "60",
+                                  "aria-valuemin": "0",
+                                  "aria-valuemax": "100"
+                                }
+                              },
+                              [
+                                _c("span", { staticClass: "sr-only" }, [
+                                  _vm._v("60% Complete (warning)")
+                                ])
+                              ]
+                            )
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ]
+          )
+        ]
+      )
+    ])
   },
   function() {
     var _vm = this
