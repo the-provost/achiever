@@ -3,6 +3,7 @@
 <div class="modal fade" id="addGoalModal" tabindex="-1" role="dialog" aria-labelledby="addGoalModalModalLabel" aria-hidden="true">
        <!-- Form -->
   <form @submit.prevent="createGoal">
+    @csrf
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -87,7 +88,7 @@
         },
         methods: {
           createGoal(){
-            this.form.post('api/goal');
+            this.form.post('goal');
           }
         },
         mounted() {

@@ -35,16 +35,20 @@ class GoalController extends Controller
      */
     public function store(Request $request)
     {   
-        $user_id = 1;
-        return Goal::create([
-            'title'=>$request['title'],
-            'description'=>$request['description'],
-            'user_id'=>$user_id,
-            'planned_start'=>$request['plannedstart'],
-            'planned_end'=>$request['plannedterm'],
-            'term'=>$request['term'],
-            'priority'=>$request['priority']
-        ]);
+        // $user = auth('api')->user();
+        // print($request->user());
+        // return Goal::create([
+        //     'title'=>$request['title'],
+        //     'description'=>$request['description'],
+        //     'user_id'=> $user,
+        //     'planned_start'=>$request['plannedstart'],
+        //     'planned_end'=>$request['plannedterm'],
+        //     'term'=>$request['term'],
+        //     'priority'=>$request['priority']
+        // ]);
+
+        // I tried so hard and got so far, in the end, it doesnt even matter. i had to fall, to lose it all but in the end it doesnt even matter 
+        // cuz i used normal controller instead of api controller to be able to get user id. if anyone knows how to get userid in api controller, please ping me. jesil@jesilsnotes.com
     }
 
     /**

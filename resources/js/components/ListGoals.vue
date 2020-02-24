@@ -247,7 +247,7 @@
         },
         methods: {
           createGoal(){
-            this.form.post('api/goal');
+            this.form.post('goal');
           },
         },
         mounted() {

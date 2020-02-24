@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use Auth;
 
 class GoalController extends Controller
 {
@@ -48,22 +49,22 @@ class GoalController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+        // $this->validate($request,[
 
-            "user_id" => ["required"],
-            "term" => ["required","string"],
-            "description" => ["required","string"],
-            "title" => ["required",'string'],
-            "priority" => ["required",'numeric'],
+        //     "user_id" => ["required"],
+        //     "term" => ["required","string"],
+        //     "description" => ["required","string"],
+        //     "title" => ["required",'string'],
+        //     "priority" => ["required",'numeric'],
 
-        ]);
+        // ]);
 
         Goal::create([
-            "user_id" => $request->get('user_id'),
+            "user_id" => Auth::id(),
             "title" => $request->get('title'),
             "description" => $request->get('description'),
-            "planned_start" => $request->get('planned_start'),
-            "planned_end" => $request->get('planned_end'),
+            "planned_start" => $request->get('plannedstart'),
+            "planned_end" => $request->get('plannedend'),
             "term" => $request->get('term'),
             "priority" => $request->get('priority')
 

@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Auth;
 
 class Goal extends Model
 {
@@ -21,6 +22,7 @@ class Goal extends Model
     protected $fillable = [
         'user_id','title','description','planned_start','planned_end','term','priority',
     ];
+
 
     /**
      * The attributes that should be hidden for arrays.
