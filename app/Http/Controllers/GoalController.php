@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class GoalController extends Controller
 {
