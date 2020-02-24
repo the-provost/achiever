@@ -1,6 +1,8 @@
 <template>
 <!-- Modal -->
 <div class="modal fade" id="addGoalModal" tabindex="-1" role="dialog" aria-labelledby="addGoalModalModalLabel" aria-hidden="true">
+       <!-- Form -->
+  <form @submit.prevent="createGoal">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -12,31 +14,30 @@
       <div class="modal-body">
         <div class="row">
             <div class="col-md-12">
-                <!-- Form -->
-                <form role="form">
+           
                 <div class="card-body">
                     <div class="form-group">
                         <label>Goal</label>
-                        <input v-model="form.username" type="text" name="username" class="form-control" :class="{ 'is-invalid': form.errors.has('username') }">
-                        <has-error :form="form" field="username"></has-error>
+                        <input v-model="form.title" type="text" name="title" class="form-control" :class="{ 'is-invalid': form.errors.has('title') }">
+                        <has-error :form="form" field="title"></has-error>
                    </div>
 
                     <div class="form-group">
                         <label>A little note</label>
-                        <input v-model="form.username" type="text" name="username" class="form-control" :class="{ 'is-invalid': form.errors.has('username') }">
-                        <has-error :form="form" field="username"></has-error>
+                        <input v-model="form.description" type="text" name="description" class="form-control" :class="{ 'is-invalid': form.errors.has('description') }">
+                        <has-error :form="form" field="description"></has-error>
                    </div>
 
                     <div class="form-group">
                         <label>Start Date (Not necessary)</label>
-                        <input v-model="form.username" type="text" name="username" class="form-control" :class="{ 'is-invalid': form.errors.has('username') }">
-                        <has-error :form="form" field="username"></has-error>
+                        <input v-model="form.plannedstart" type="date" name="startDate" class="form-control" :class="{ 'is-invalid': form.errors.has('plannedststart') }">
+                        <has-error :form="form" field="plannedstart"></has-error>
                    </div>
 
                     <div class="form-group">
                         <label>End Date (Not necessary)</label>
-                        <input v-model="form.username" type="text" name="userName" class="form-control" :class="{ 'is-invalid': form.errors.has('username') }">
-                        <has-error :form="form" field="username"></has-error>
+                        <input v-model="form.plannedend" type="date" name="endDate" class="form-control" :class="{ 'is-invalid': form.errors.has('plannedend') }">
+                        <has-error :form="form" field="plannedend"></has-error>
                    </div>
 
                     <div class="form-group">
@@ -48,14 +49,13 @@
 
                     <div class="form-group">
                         <label>Term</label>
-                        <input v-model="form.username" type="text" name="username" class="form-control" :class="{ 'is-invalid': form.errors.has('username') }">
-                        <has-error :form="form" field="username"></has-error>
+                        <input v-model="form.term" type="text" name="term" class="form-control" :class="{ 'is-invalid': form.errors.has('term') }">
+                        <has-error :form="form" field="term"></has-error>
                    </div>
 
                 </div>
                 <!-- /.card-body -->
-              </form>
-                <!-- Form Ends -->
+              
             </div>
         </div>
       </div>
@@ -65,13 +65,15 @@
       </div>
     </div>
   </div>
+  </form>
+                <!-- Form Ends -->
 </div>
 
 </template>
 
 <script>
-    export default {
-        data(){
+     export default {
+        data (){
             return{
                 form: new Form({
                     title:'',
@@ -79,9 +81,14 @@
                     plannedstart:'',
                     plannedend:'',
                     term:'',
-                    priority:'',
+                    priority:''
                 })
             }
+        },
+        methods: {
+          createGoal(){
+            this.form.post('api/goal');
+          }
         },
         mounted() {
             console.log('Component mounted.')

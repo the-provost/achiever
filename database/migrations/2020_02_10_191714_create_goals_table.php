@@ -17,7 +17,7 @@ class CreateGoalsTable extends Migration
             $table->bigIncrements('id')->unique();
             $table->unsignedbigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('title', 255);
+            $table->string('title', 255)->unique();
             $table->string('description', 255)->nullable();
             $table->date('planned_start')->nullable();
             $table->date('planned_end')->nullable();
@@ -25,8 +25,8 @@ class CreateGoalsTable extends Migration
             $table->enum('priority', ['1', '2','3','4','5','6','7','8','9','10']);
             $table->enum('status',['Bucket-List','In-Progress','Achieved','Side-Tracked'])->default('Bucket-List');
             $table->string('percentage', 255)->nullable();
-            $table->enum('type', ['Goal', 'Task']);
-            $table->bigInteger('task_id', 255)->nullable();
+            $table->enum('type', ['Goal', 'Task'])->default('Goal');
+            $table->bigInteger('task_id')->nullable();
             $table->timestamps();
 
             $table->index('user_id');

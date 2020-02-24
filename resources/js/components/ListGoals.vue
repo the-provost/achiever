@@ -232,7 +232,24 @@
 </template>
 
 <script>
-    export default {
+     export default {
+        data (){
+            return{
+                form: new Form({
+                    title:'',
+                    description:'',
+                    plannedstart:'',
+                    plannedend:'',
+                    term:'',
+                    priority:''
+                })
+            }
+        },
+        methods: {
+          createGoal(){
+            this.form.post('api/goal');
+          },
+        },
         mounted() {
             console.log('Component mounted.')
         }
