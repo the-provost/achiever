@@ -23071,7 +23071,8 @@ __webpack_require__.r(__webpack_exports__);
         term: '',
         priority: ''
       }),
-      isHidden: true
+      showTaskList: 'none',
+      id: null
     };
   },
   methods: {
@@ -23098,7 +23099,19 @@ __webpack_require__.r(__webpack_exports__);
     },
     createTasks: function createTasks() {
       this.addTaskForm.post('task');
-    }
+    },
+    showTasks: function showTasks() {
+      // this.id=event.srcElement.id;
+      if (this.showTaskList == 'block') {
+        this.showTaskList = 'none';
+      } else {
+        this.showTaskList = 'block';
+      }
+    } //           showTasks()
+    // {
+    //     alert(event.srcElement.id);
+    // }
+
   },
   mounted: function mounted() {
     this.loadGoals(); // calling the method to load all goals from table
@@ -79879,12 +79892,15 @@ var render = function() {
                                                       staticStyle: {
                                                         width: "100%"
                                                       },
-                                                      attrs: { type: "button" },
+                                                      attrs: {
+                                                        type: "button",
+                                                        id: goal.id
+                                                      },
                                                       on: {
                                                         click: function(
                                                           $event
                                                         ) {
-                                                          _vm.isHidden = !_vm.isHidden
+                                                          return _vm.showTasks()
                                                         }
                                                       }
                                                     },
@@ -80049,17 +80065,16 @@ var render = function() {
                           ),
                           _vm._v(" "),
                           _vm._l(_vm.tasks, function(task) {
-                            return !_vm.isHidden
-                              ? _c(
-                                  "div",
-                                  {
-                                    key: task.id,
-                                    staticClass: "taskrow",
-                                    attrs: { id: goal.id }
-                                  },
-                                  [_vm._m(5, true)]
-                                )
-                              : _vm._e()
+                            return _c(
+                              "div",
+                              {
+                                key: task.id,
+                                staticClass: "taskrow",
+                                style: { display: _vm.showTaskList },
+                                attrs: { id: goal.id }
+                              },
+                              [_vm._m(5, true)]
+                            )
                           }),
                           _vm._v(" "),
                           _c("br")

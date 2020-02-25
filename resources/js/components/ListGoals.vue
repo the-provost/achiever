@@ -95,7 +95,7 @@
            <button type="button" class="btn aor" style="width:100%;">Tasks</button>
            <button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
            <i class="fas fa-plus"></i></button>
-           <button type="button" class="btn aor" v-on:click="isHidden = !isHidden" style="width:100%; ">
+           <button type="button" class="btn aor" :id='goal.id' @click="showTasks()" style="width:100%; ">
            <i class="fas fa-list"></i></button>
            </div>
            </div>
@@ -136,8 +136,8 @@
 <!-- To use date filter {{goal.date | aDate}} -->
 
 <!-- TASK list item divs -->
- <!-- v-if="!tasksHidden" -->
-<div class="taskrow" v-for="task in  tasks" :key="task.id" :id=goal.id v-if="!isHidden">
+ <!-- v-if="!isHidden" -->
+<div class="taskrow" v-for="task in  tasks" :key="task.id" :id="goal.id" v-bind:style="{ 'display': showTaskList }">
   <div class="col-md-11 justify-content-center center-block">
     <div class="card card-warning card-outline-warning shadow-none" style="background-color: rgba(250, 218, 136, 0.34);">
       <div class="card-body">TASKS
@@ -261,7 +261,8 @@
                     term:'',
                     priority:''
                 }),
-                isHidden: true
+                showTaskList: 'none',
+                id: null
             }
         },
         methods: {
@@ -281,7 +282,22 @@
           },
           createTasks(){
             this.addTaskForm.post('task');
+          },
+         
+          showTasks: function() {
+            // this.id=event.srcElement.id;
+		        if (this.showTaskList == 'block') {
+            this.showTaskList = 'none';
+            } 
+            else {
+		      	this.showTaskList = 'block';
+		        }
           }
+
+//           showTasks()
+// {
+//     alert(event.srcElement.id);
+// }
         },
         mounted() {
             this.loadGoals();
