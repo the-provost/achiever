@@ -22805,323 +22805,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ListGoals.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      goals: {},
-      // goals object so curly brackets
-      tasks: {},
-      // tasks object so curly brackets
-      //tasksHidden: true,
-      // to hide tasks
-      addGoalForm: new Form({
-        title: '',
-        description: '',
-        plannedstart: '',
-        plannedend: '',
-        term: '',
-        priority: ''
-      }),
-      addTaskForm: new Form({
-        title: '',
-        description: '',
-        plannedstart: '',
-        plannedend: '',
-        term: '',
-        priority: ''
-      }),
-      showTaskList: 'none',
-      id: null
-    };
-  },
-  methods: {
-    loadGoals: function loadGoals() {
-      var _this = this;
-
-      axios.get("goal").then(function (_ref) {
-        var data = _ref.data;
-        return _this.goals = data;
-      }); // funtion ({data}) that stores the axios data into a goals object here 
-    },
-    createGoal: function createGoal() {
-      this.$Progress.start();
-      this.addGoalForm.post('goal');
-      this.$Progress.finish();
-    },
-    loadTasks: function loadTasks() {
-      var _this2 = this;
-
-      axios.get("task").then(function (_ref2) {
-        var data = _ref2.data;
-        return _this2.tasks = data;
-      }); // funtion ({data}) that stores the axios data into a taskss object here 
-    },
-    createTasks: function createTasks() {
-      this.addTaskForm.post('task');
-    },
-    showTasks: function showTasks() {
-      // this.id=event.srcElement.id;
-      if (this.showTaskList == 'block') {
-        this.showTaskList = 'none';
-      } else {
-        this.showTaskList = 'block';
-      }
-    } //           showTasks()
-    // {
-    //     alert(event.srcElement.id);
-    // }
-
-  },
-  mounted: function mounted() {
-    this.loadGoals(); // calling the method to load all goals from table
-
-    console.log('Loading Goals...');
-    this.loadTasks(); // calling the method to load all tasks from table
-
-    console.log('Loading Tasks...');
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: J:\\glab\\achiever\\resources\\js\\components\\ListGoals.vue: Unexpected token, expected \"(\" (286:12)\n\n\u001b[0m \u001b[90m 284 | \u001b[39m          loadSelectedTasks(id){\u001b[0m\n\u001b[0m \u001b[90m 285 | \u001b[39m            \u001b[36mfor\u001b[39m \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 286 | \u001b[39m            axios\u001b[33m.\u001b[39mget(\u001b[32m\"task\"\u001b[39m\u001b[33m,\u001b[39m {params\u001b[33m:\u001b[39m{id\u001b[33m:\u001b[39m id}})\u001b[33m.\u001b[39mthen(({data}) \u001b[33m=>\u001b[39m (\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectedTasks \u001b[33m=\u001b[39m data))\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 287 | \u001b[39m            \u001b[90m// funtion ({data}) that stores the axios data into a taskss object here \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 288 | \u001b[39m          }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 289 | \u001b[39m          createTasks(){\u001b[0m\n    at Parser.raise (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:7017:17)\n    at Parser.unexpected (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:8395:16)\n    at Parser.expect (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:8381:28)\n    at Parser.parseForStatement (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10985:10)\n    at Parser.parseStatementContent (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10715:21)\n    at Parser.parseStatement (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10690:17)\n    at Parser.parseBlockOrModuleBlockBody (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:11264:25)\n    at Parser.parseBlockBody (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:11251:10)\n    at Parser.parseBlock (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:11235:10)\n    at Parser.parseFunctionBody (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10252:24)\n    at Parser.parseFunctionBodyAndFinish (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10222:10)\n    at Parser.parseMethod (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10187:10)\n    at Parser.parseObjectMethod (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10104:19)\n    at Parser.parseObjPropValue (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10146:23)\n    at Parser.parseObjectMember (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10070:10)\n    at Parser.parseObj (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9991:25)\n    at Parser.parseExprAtom (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9616:28)\n    at Parser.parseExprSubscripts (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9259:23)\n    at Parser.parseMaybeUnary (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9239:21)\n    at Parser.parseExprOps (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9109:23)\n    at Parser.parseMaybeConditional (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9082:23)\n    at Parser.parseMaybeAssign (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9037:21)\n    at Parser.parseObjectProperty (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10121:101)\n    at Parser.parseObjPropValue (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10146:101)\n    at Parser.parseObjectMember (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10070:10)\n    at Parser.parseObj (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9991:25)\n    at Parser.parseExprAtom (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9616:28)\n    at Parser.parseExprSubscripts (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9259:23)\n    at Parser.parseMaybeUnary (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9239:21)\n    at Parser.parseExprOps (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9109:23)\n    at Parser.parseMaybeConditional (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9082:23)\n    at Parser.parseMaybeAssign (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:9037:21)\n    at Parser.parseExportDefaultExpression (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:11866:24)\n    at Parser.parseExport (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:11768:31)\n    at Parser.parseStatementContent (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10794:27)\n    at Parser.parseStatement (J:\\glab\\achiever\\node_modules\\@babel\\parser\\lib\\index.js:10690:17)");
 
 /***/ }),
 
@@ -79133,7 +78819,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-body" }, [
       _vm._v(
-        "\n                        Who doesn't like to mark stuff on a calendar. I know I do.\n                        "
+        "\r\n                        Who doesn't like to mark stuff on a calendar. I know I do.\r\n                        "
       ),
       _c("br"),
       _vm._v(" "),
@@ -79252,7 +78938,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-body" }, [
       _vm._v(
-        "\n                        Who doesn't like to mark stuff on a calendar. I know I do.\n                        "
+        "\r\n                        Who doesn't like to mark stuff on a calendar. I know I do.\r\n                        "
       ),
       _c("br"),
       _vm._v(" "),
@@ -79397,7 +79083,7 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("span", { staticClass: "progress-description" }, [
-              _vm._v("\n          70% Increase in 30 Days\n        ")
+              _vm._v("\r\n          70% Increase in 30 Days\r\n        ")
             ])
           ])
         ])
@@ -79422,7 +79108,7 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("span", { staticClass: "progress-description" }, [
-              _vm._v("\n          70% Increase in 30 Days\n        ")
+              _vm._v("\r\n          70% Increase in 30 Days\r\n        ")
             ])
           ])
         ])
@@ -79447,7 +79133,7 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("span", { staticClass: "progress-description" }, [
-              _vm._v("\n          70% Increase in 30 Days\n        ")
+              _vm._v("\r\n          70% Increase in 30 Days\r\n        ")
             ])
           ])
         ])
@@ -79499,7 +79185,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("br"),
       _vm._v(
-        "\n                        Something to help you visualize your vision upon completion of each goal.\n                        "
+        "\r\n                        Something to help you visualize your vision upon completion of each goal.\r\n                        "
       ),
       _c("br"),
       _vm._v(" "),
@@ -79656,12 +79342,12 @@ var render = function() {
                           [
                             _c("div", [
                               _c("strong", [_vm._v("id:")]),
-                              _vm._v(" " + _vm._s(block.id) + "\n    ")
+                              _vm._v(" " + _vm._s(block.id) + "\r\n    ")
                             ]),
                             _vm._v(" "),
                             _c("div", [
                               _vm._v(
-                                "\n      " + _vm._s(block.title) + "\n    "
+                                "\r\n      " + _vm._s(block.title) + "\r\n    "
                               )
                             ])
                           ]
@@ -79892,15 +79578,14 @@ var render = function() {
                                                       staticStyle: {
                                                         width: "100%"
                                                       },
-                                                      attrs: {
-                                                        type: "button",
-                                                        id: goal.id
-                                                      },
+                                                      attrs: { type: "button" },
                                                       on: {
                                                         click: function(
                                                           $event
                                                         ) {
-                                                          return _vm.showTasks()
+                                                          return _vm.showTasks(
+                                                            goal.id
+                                                          )
                                                         }
                                                       }
                                                     },
@@ -80064,16 +79749,94 @@ var render = function() {
                             ]
                           ),
                           _vm._v(" "),
-                          _vm._l(_vm.tasks, function(task) {
+                          _vm._l(_vm.selectedTasks, function(task) {
                             return _c(
                               "div",
                               {
                                 key: task.id,
                                 staticClass: "taskrow",
-                                style: { display: _vm.showTaskList },
-                                attrs: { id: goal.id }
+                                attrs: { id: goal.id, hidden: "true" }
                               },
-                              [_vm._m(5, true)]
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "col-md-11 justify-content-center center-block"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "card card-warning card-outline-warning shadow-none",
+                                        staticStyle: {
+                                          "background-color":
+                                            "rgba(250, 218, 136, 0.34)"
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "card-body" },
+                                          [
+                                            _vm._v("TASKS\r\n       "),
+                                            _c("div", { staticClass: "row" }, [
+                                              _c(
+                                                "div",
+                                                { staticClass: "col-md-12" },
+                                                [
+                                                  _c(
+                                                    "h5",
+                                                    {
+                                                      staticClass: "card-title"
+                                                    },
+                                                    [_vm._v(_vm._s(task.title))]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "p",
+                                                    {
+                                                      staticClass: "card-text"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\r\n             Some quick example text to build on the card title and make up the bulk of the card's\r\n             content.\r\n           "
+                                                      )
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "a",
+                                                    {
+                                                      staticClass: "card-link",
+                                                      attrs: { href: "#" }
+                                                    },
+                                                    [_vm._v("Card link")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "a",
+                                                    {
+                                                      staticClass: "card-link",
+                                                      attrs: { href: "#" }
+                                                    },
+                                                    [_vm._v("Another link")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c("br")
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._m(5, true)
+                                            ])
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
                             )
                           }),
                           _vm._v(" "),
@@ -80359,7 +80122,10 @@ var staticRenderFns = [
             "data-target": "#addTaskModal"
           }
         },
-        [_c("i", { staticClass: "far fa-edit" }), _vm._v(" Edit")]
+        [
+          _c("i", { staticClass: "far fa-edit" }),
+          _vm._v(" Edit\r\n           \t")
+        ]
       )
     ])
   },
@@ -80367,146 +80133,95 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "col-md-11 justify-content-center center-block" },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "card card-warning card-outline-warning shadow-none",
-            staticStyle: { "background-color": "rgba(250, 218, 136, 0.34)" }
-          },
-          [
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v("TASKS\r\n       "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-md-12" }, [
-                  _c("h5", { staticClass: "card-title" }, [
-                    _vm._v("Card title")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v(
-                      "\r\n             Some quick example text to build on the card title and make up the bulk of the card's\r\n             content.\r\n           "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { staticClass: "card-link", attrs: { href: "#" } }, [
-                    _vm._v("Card link")
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { staticClass: "card-link", attrs: { href: "#" } }, [
-                    _vm._v("Another link")
-                  ]),
-                  _vm._v(" "),
-                  _c("br")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "row", staticStyle: { width: "100%" } },
-                  [
-                    _c("div", { staticClass: "col-md-12 d-flex" }, [
-                      _c("div", { staticClass: "col-md-2 d-flex" }, [
-                        _c("div", { staticClass: "btn-group" }, [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn pbar7",
-                              staticStyle: { width: "100%" },
-                              attrs: {
-                                type: "button",
-                                "data-toggle": "modal",
-                                "data-target": "#addTaskModal"
-                              }
-                            },
-                            [_c("i", { staticClass: "fas fa-edit" })]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn pbar7",
-                              staticStyle: { width: "100%" },
-                              attrs: {
-                                type: "button",
-                                "data-toggle": "modal",
-                                "data-target": "#addTaskModal"
-                              }
-                            },
-                            [_c("i", { staticClass: "fas fa-trash" })]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn pbar7",
-                              staticStyle: { width: "100%" },
-                              attrs: {
-                                type: "button",
-                                "data-toggle": "modal",
-                                "data-target": "#addTaskModal"
-                              }
-                            },
-                            [_c("i", { staticClass: "fas fa-exchange-alt" })]
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-md-4 d-flex" }, [
-                        _c(
-                          "div",
-                          { staticClass: "priority-unit d-flex pt-0 pl-4" },
-                          [
-                            _c("div", {
-                              staticClass: "priority-circle pbar10",
-                              staticStyle: {
-                                height: "30px",
-                                width: "30px",
-                                "border-radius": "100%"
-                              }
-                            })
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-md-6 pt-2" }, [
-                        _c("div", { staticClass: "progress progress-xss" }, [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "progress-bar pbar7 progress-bar-striped",
-                              staticStyle: { width: "60%" },
-                              attrs: {
-                                role: "progressbar",
-                                "aria-valuenow": "60",
-                                "aria-valuemin": "0",
-                                "aria-valuemax": "100"
-                              }
-                            },
-                            [
-                              _c("span", { staticClass: "sr-only" }, [
-                                _vm._v("60% Complete (warning)")
-                              ])
-                            ]
-                          )
-                        ])
-                      ])
-                    ])
-                  ]
-                )
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+    return _c("div", { staticClass: "row", staticStyle: { width: "100%" } }, [
+      _c("div", { staticClass: "col-md-12 d-flex" }, [
+        _c("div", { staticClass: "col-md-2 d-flex" }, [
+          _c("div", { staticClass: "btn-group" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn pbar7",
+                staticStyle: { width: "100%" },
+                attrs: {
+                  type: "button",
+                  "data-toggle": "modal",
+                  "data-target": "#addTaskModal"
+                }
+              },
+              [_c("i", { staticClass: "fas fa-edit" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn pbar7",
+                staticStyle: { width: "100%" },
+                attrs: {
+                  type: "button",
+                  "data-toggle": "modal",
+                  "data-target": "#addTaskModal"
+                }
+              },
+              [_c("i", { staticClass: "fas fa-trash" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn pbar7",
+                staticStyle: { width: "100%" },
+                attrs: {
+                  type: "button",
+                  "data-toggle": "modal",
+                  "data-target": "#addTaskModal"
+                }
+              },
+              [_c("i", { staticClass: "fas fa-exchange-alt" })]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-4 d-flex" }, [
+          _c("div", { staticClass: "priority-unit d-flex pt-0 pl-4" }, [
+            _c("div", {
+              staticClass: "priority-circle pbar10",
+              staticStyle: {
+                height: "30px",
+                width: "30px",
+                "border-radius": "100%"
+              }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-6 pt-2" }, [
+          _c("div", { staticClass: "progress progress-xss" }, [
+            _c(
+              "div",
+              {
+                staticClass: "progress-bar pbar7 progress-bar-striped",
+                staticStyle: { width: "60%" },
+                attrs: {
+                  role: "progressbar",
+                  "aria-valuenow": "60",
+                  "aria-valuemin": "0",
+                  "aria-valuemax": "100"
+                }
+              },
+              [
+                _c("span", { staticClass: "sr-only" }, [
+                  _vm._v("60% Complete (warning)")
+                ])
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
   },
   function() {
     var _vm = this
@@ -80620,7 +80335,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-body" }, [
       _vm._v(
-        "\n                        Who doesn't like to mark stuff on a calendar. I know I do.\n                        "
+        "\r\n                        Who doesn't like to mark stuff on a calendar. I know I do.\r\n                        "
       ),
       _c("br"),
       _vm._v(" "),
@@ -80739,7 +80454,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-body" }, [
       _vm._v(
-        "\n                        Who doesn't like to mark stuff on a calendar. I know I do.\n                        "
+        "\r\n                        Who doesn't like to mark stuff on a calendar. I know I do.\r\n                        "
       ),
       _c("br"),
       _vm._v(" "),
@@ -80861,7 +80576,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("br"),
       _vm._v(
-        "\n                        Something to help you visualize your vision upon completion of each goal.\n                        "
+        "\r\n                        Something to help you visualize your vision upon completion of each goal.\r\n                        "
       ),
       _c("br"),
       _vm._v(" "),
@@ -80930,7 +80645,7 @@ var render = function() {
           }
         },
         [
-          _vm._v("\n    @csrf\n  "),
+          _vm._v("\r\n    @csrf\r\n  "),
           _c(
             "div",
             {
@@ -81341,7 +81056,7 @@ var render = function() {
           }
         },
         [
-          _vm._v("\n    @csrf\n  "),
+          _vm._v("\r\n    @csrf\r\n  "),
           _c(
             "div",
             {

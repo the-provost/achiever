@@ -27,9 +27,12 @@ class TaskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $tasks = Task::where('type', 'Task')->get();
+        
+        $task = $request->get('id');
+        $tasks = Task::where('type', 'Task')->where('task_id',$task )->get();
+        // $tasks = Task::where('type', 'Task')->get();
         // $goals=DB::table('goals')->where('type', 'Goal')->get();
         return $tasks;
     }
@@ -68,7 +71,8 @@ class TaskController extends Controller
             "planned_end" => $request->get('plannedend'),
             "term" => $request->get('term'),
             "priority" => $request->get('priority'),
-            "type"=> "Task"
+            "type"=> "Task",
+            "task_id"=>"1"
         ]);
 
     }
@@ -81,7 +85,10 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        //
+        // $task = $request->get('id');
+        // $tasks = Task::where('type', 'Task')->where('task_id',$task )->get();
+        // // $goals=DB::table('goals')->where('type', 'Goal')->get();
+        // return $tasks;
     }
 
     /**

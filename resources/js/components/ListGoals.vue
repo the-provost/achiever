@@ -70,11 +70,11 @@
 
 <!-- list items main -->
 <div class="row justify-content-center center-block" v-for="goal in  goals" :key="goal.id">
-    <div class="col-sm-10">
+	<div class="col-sm-10">
 
 
 <!-- list item divs -->
-<div class="card card-primary card-outline shadow-none">
+		<div class="card card-primary card-outline shadow-none">
      <div class="card-body">
        <div class="row">
          <div class="col-md-12">
@@ -90,28 +90,30 @@
 
          <div class="row" style="width:100%;">
            <div class="col-md-12 d-flex">
-           <div class="col-md-2 d-flex">
+           	<div class="col-md-2 d-flex">
              <div class="btn-group">
-           <button type="button" class="btn aor" style="width:100%;">Tasks</button>
-           <button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
-           <i class="fas fa-plus"></i></button>
-           <button type="button" class="btn aor" :id='goal.id' @click="showTasks()" style="width:100%; ">
-           <i class="fas fa-list"></i></button>
-           </div>
+           		<button type="button" class="btn aor" style="width:100%;">Tasks</button>
+           		<button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
+           		<i class="fas fa-plus"></i></button>
+           		<button type="button" class="btn aor" @click="showTasks(goal.id)" style="width:100%; ">
+           			<i class="fas fa-list"></i>
+           		</button>
+           	</div>
            </div>
            <br>
            <div class="col-md-2 d-flex ml-4">
              <button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
-           <i class="far fa-edit"></i>&nbsp;Edit</button>
+           			<i class="far fa-edit"></i>&nbsp;Edit
+           	</button>
            </div>
            <br>
            <div class="col-md-1 d-flex">
-           <div class="priority-unit d-flex pt-0 pl-4">
+           	<div class="priority-unit d-flex pt-0 pl-4">
              <!-- justify-content-center center-block" align="center" style="width:100%;"> -->
-           <div class="priority-circle justify-content-center center-block pt-1" align="center" :class="{pbar10: goal.priority == 10, pbar9: goal.priority == 9, pbar8: goal.priority == 8, pbar7: goal.priority == 7, pbar6: goal.priority == 6, pbar5: goal.priority == 5, pbar4: goal.priority == 4, pbar3: goal.priority == 3, pbar2: goal.priority == 2, pbar1: goal.priority == 1, pbar0: goal.priority == 0}" 
+           		<div class="priority-circle justify-content-center center-block pt-1" align="center" :class="{pbar10: goal.priority == 10, pbar9: goal.priority == 9, pbar8: goal.priority == 8, pbar7: goal.priority == 7, pbar6: goal.priority == 6, pbar5: goal.priority == 5, pbar4: goal.priority == 4, pbar3: goal.priority == 3, pbar2: goal.priority == 2, pbar1: goal.priority == 1, pbar0: goal.priority == 0}" 
            style="height:30px; width:30px; border-radius:100%;">{{goal.priority}}</div>
            <!-- dynamic class association https://stackoverflow.com/questions/49346904/how-to-apply-dynamic-css-class-in-v-for-according-to-the-value-of-the-element  -->
-           </div>
+           	</div>
            </div>           
            <br>
            <div class="col-md-6 pt-2">
@@ -121,7 +123,7 @@
                   <!-- :style="{ width: goal.percentage + '%' }"> -->
                     <span class="sr-only">{{goal.percentage}}% Complete (warning)</span>
                   </div>
-                </div>
+               </div>
            </div>
            
          </div> 
@@ -137,13 +139,13 @@
 
 <!-- TASK list item divs -->
  <!-- v-if="!isHidden" -->
-<div class="taskrow" v-for="task in  tasks" :key="task.id" :id="goal.id" v-bind:style="{ 'display': showTaskList }">
+<div class="taskrow" v-for="task in selectedTasks" :key="task.id" :id="goal.id" hidden="true">
   <div class="col-md-11 justify-content-center center-block">
     <div class="card card-warning card-outline-warning shadow-none" style="background-color: rgba(250, 218, 136, 0.34);">
       <div class="card-body">TASKS
        <div class="row"> 
          <div class="col-md-12">
-           <h5 class="card-title">Card title</h5>
+           <h5 class="card-title">{{task.title}}</h5>
            <p class="card-text">
              Some quick example text to build on the card title and make up the bulk of the card's
              content.
@@ -243,8 +245,7 @@
               // goals object so curly brackets
               tasks: {}, 
               // tasks object so curly brackets
-              //tasksHidden: true,
-              // to hide tasks
+              selectedTasks: {},
               addGoalForm: new Form({
                     title:'',
                     description:'',
@@ -261,7 +262,7 @@
                     term:'',
                     priority:''
                 }),
-                showTaskList: 'none',
+               
                 id: null
             }
         },
@@ -280,17 +281,24 @@
             axios.get("task").then(({data}) => (this.tasks = data));
             // funtion ({data}) that stores the axios data into a taskss object here 
           },
+          loadSelectedTasks(id){
+            for 
+            axios.get("task", {params:{id: id}}).then(({data}) => (this.selectedTasks = data));
+            // funtion ({data}) that stores the axios data into a taskss object here 
+          },
           createTasks(){
             this.addTaskForm.post('task');
           },
          
-          showTasks: function() {
+          showTasks: function(id) {
             // this.id=event.srcElement.id;
-		        if (this.showTaskList == 'block') {
-            this.showTaskList = 'none';
+            this.loadSelectedTasks(id);
+            var f=document.getElementById(id);
+		        if (f.hidden == true) {
+            	f.hidden = false;
             } 
             else {
-		      	this.showTaskList = 'block';
+		      		f.hidden = true;
 		        }
           }
 
