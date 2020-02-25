@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class GoalController extends Controller
 {
@@ -28,7 +29,10 @@ class GoalController extends Controller
      */
     public function index()
     {
-        return Goal::all();
+        $goals = Goal::where('type', 'Goal')->get();
+        // $goals=DB::table('goals')->where('type', 'Goal')->get();
+        // requires the use of Illuminate\Support\Facades\DB;
+        return $goals;
     }
 
     /**

@@ -29,7 +29,9 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return Task::all();
+        $tasks = Task::where('type', 'Task')->get();
+        // $goals=DB::table('goals')->where('type', 'Goal')->get();
+        return $tasks;
     }
 
     /**

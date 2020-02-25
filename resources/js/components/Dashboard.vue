@@ -140,7 +140,7 @@
     <br>
     <br>
     <div class="row justify-content-center center-block">
-        <div class="col-md-6 justify-content-center center-block">
+        <div class="col-md-5 justify-content-center center-block">
         <img src="img/greydeskbanner.svg">
         </div>
     </div>

@@ -41,7 +41,7 @@
 
   <!-- Content Wrapper. Contains page content -->
 
-
+<vue-progress-bar></vue-progress-bar>
 
     <router-view>
             {{-- vue components here --}}

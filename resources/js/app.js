@@ -36,8 +36,17 @@ Vue.use(VueProgressBar, options);
 import VueKanban from 'vue-kanban4achiever';
 Vue.use(VueKanban);
 
+import moment from 'moment';
+
+Vue.filter('aDate',function(appdate){
+  return moment(appdate).format('Do MMMM YYYY')
+})
+
 import swal from 'admin-lte/plugins/sweetalert2/sweetalert2.js';
 window.Swal=swal;
+// Swal to be used to make new in all vues
+
+
 // const toast=swal.mixin({
 //   toast: true,
 //   position: 'top-end',
@@ -51,6 +60,7 @@ import FullCalendar from 'admin-lte/plugins/fullcalendar/main.js';
 import Toastr from 'admin-lte/plugins/toastr/toastr.min.js';
 
 import { Form, HasError, AlertError } from 'vform'
+import { createDuration } from '@fullcalendar/core';
 // to have access to the form everywhere
 window.Form=Form;
 

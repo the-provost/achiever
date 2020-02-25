@@ -69,12 +69,12 @@
 
 
 <!-- list items main -->
-<div class="row justify-content-center center-block">
+<div class="row justify-content-center center-block" v-for="goal in  goals" :key="goal.id">
     <div class="col-sm-10">
 
 
 <!-- list item divs -->
-<div class="card card-primary card-outline shadow-none" v-for="goal in  goals" :key="goal.id">
+<div class="card card-primary card-outline shadow-none">
      <div class="card-body">
        <div class="row">
          <div class="col-md-12">
@@ -96,7 +96,7 @@
              Tasks</button>
            <button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
            <i class="fas fa-plus"></i></button>
-           <button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
+           <button type="button" class="btn aor" v-on:click="isHidden = !isHidden"  style="width:100%; ">
            <i class="fas fa-list"></i></button>
            </div>
            </div>
@@ -134,14 +134,15 @@
 
 <!-- list item div ends -->
 
-
+<!-- To use date filter {{goal.date | aDate}} -->
 
 <!-- TASK list item divs -->
-<div class="taskrow" style="">
+ <!-- v-if="!tasksHidden" -->
+<div class="taskrow" v-for="task in  tasks" :key="task.id" :id=goal.id v-if="!isHidden">
   <div class="col-md-11 justify-content-center center-block">
     <div class="card card-warning card-outline-warning shadow-none" style="background-color: rgba(250, 218, 136, 0.34);">
-      <div class="card-body">
-       <div class="row">
+      <div class="card-body">TASKS
+       <div class="row"> 
          <div class="col-md-12">
            <h5 class="card-title">Card title</h5>
            <p class="card-text">
@@ -243,6 +244,8 @@
               // goals object so curly brackets
               tasks: {}, 
               // tasks object so curly brackets
+              //tasksHidden: true,
+              // to hide tasks
               addGoalForm: new Form({
                     title:'',
                     description:'',
@@ -258,7 +261,8 @@
                     plannedend:'',
                     term:'',
                     priority:''
-                })
+                }),
+                isHidden: false
             }
         },
         methods: {
@@ -267,7 +271,10 @@
             // funtion ({data}) that stores the axios data into a goals object here 
           },
           createGoal(){
+            this.$Progress.start();
             this.addGoalForm.post('goal');
+             
+            this.$Progress.finish();
           },
           loadTasks(){
             axios.get("task").then(({data}) => (this.tasks = data));
