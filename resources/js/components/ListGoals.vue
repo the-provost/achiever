@@ -262,7 +262,7 @@
                     term:'',
                     priority:''
                 }),
-                isHidden: false
+                isHidden: true
             }
         },
         methods: {

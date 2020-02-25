@@ -23072,7 +23072,7 @@ __webpack_require__.r(__webpack_exports__);
         term: '',
         priority: ''
       }),
-      isHidden: false
+      isHidden: true
     };
   },
   methods: {
