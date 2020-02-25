@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Goal;
+use App\Task;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 
-class GoalController extends Controller
+class TaskController extends Controller
 {
        /**
      * Create a new controller instance.
@@ -28,7 +29,7 @@ class GoalController extends Controller
      */
     public function index()
     {
-        return Goal::all();
+        return Task::all();
     }
 
     /**
@@ -57,7 +58,7 @@ class GoalController extends Controller
 
         ]);
 
-        Goal::create([
+        Task::create([
             "user_id" => Auth::id(),
             "title" => $request->get('title'),
             "description" => $request->get('description'),
@@ -65,7 +66,7 @@ class GoalController extends Controller
             "planned_end" => $request->get('plannedend'),
             "term" => $request->get('term'),
             "priority" => $request->get('priority'),
-            "type"=> "Goal"
+            "type"=> "Task"
         ]);
 
     }
@@ -73,10 +74,10 @@ class GoalController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Goal  $goal
+     * @param  \App\Task  $goal
      * @return \Illuminate\Http\Response
      */
-    public function show(Goal $goal)
+    public function show(Task $task)
     {
         //
     }
@@ -84,10 +85,10 @@ class GoalController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Goal  $goal
+     * @param  \App\Task  $task
      * @return \Illuminate\Http\Response
      */
-    public function edit(Goal $goal)
+    public function edit(Task $task)
     {
         //
     }
@@ -96,10 +97,10 @@ class GoalController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Goal  $goal
+     * @param  \App\Task  $task
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Goal $goal)
+    public function update(Request $request, Task $task)
     {
         //
     }
@@ -107,10 +108,10 @@ class GoalController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Goal  $goal
+     * @param  \App\Task  $task
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Goal $goal)
+    public function destroy(Task $task)
     {
         //
     }

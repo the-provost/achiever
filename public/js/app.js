@@ -14330,7 +14330,17 @@ __webpack_require__.r(__webpack_exports__);
     return {
       goals: {},
       // goals object so curly brackets
-      form: new Form({
+      tasks: {},
+      // tasks object so curly brackets
+      addGoalForm: new Form({
+        title: '',
+        description: '',
+        plannedstart: '',
+        plannedend: '',
+        term: '',
+        priority: ''
+      }),
+      addTaskForm: new Form({
         title: '',
         description: '',
         plannedstart: '',
@@ -14350,13 +14360,27 @@ __webpack_require__.r(__webpack_exports__);
       }); // funtion ({data}) that stores the axios data into a goals object here 
     },
     createGoal: function createGoal() {
-      this.form.post('goal');
+      this.addGoalForm.post('goal');
+    },
+    loadTasks: function loadTasks() {
+      var _this2 = this;
+
+      axios.get("task").then(function (_ref2) {
+        var data = _ref2.data;
+        return _this2.tasks = data;
+      }); // funtion ({data}) that stores the axios data into a taskss object here 
+    },
+    createTasks: function createTasks() {
+      this.addTaskForm.post('task');
     }
   },
   mounted: function mounted() {
     this.loadGoals(); // calling the method to load all goals from table
 
     console.log('Loading Goals...');
+    this.loadTasks(); // calling the method to load all tasks from table
+
+    console.log('Loading Tasks...');
   }
 });
 
@@ -14694,7 +14718,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      form: new Form({
+      addGoalForm: new Form({
         title: '',
         description: '',
         plannedstart: '',
@@ -14706,7 +14730,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     createGoal: function createGoal() {
-      this.form.post('goal');
+      this.addGoalForm.post('goal');
     }
   },
   mounted: function mounted() {
@@ -14796,10 +14820,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      form: new Form({
+      addTaskForm: new Form({
         title: '',
         description: '',
         plannedstart: '',
@@ -14808,6 +14835,11 @@ __webpack_require__.r(__webpack_exports__);
         priority: ''
       })
     };
+  },
+  methods: {
+    createTask: function createTask() {
+      this.addTaskForm.post('task');
+    }
   },
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -54524,23 +54556,25 @@ var render = function() {
                                 {
                                   name: "model",
                                   rawName: "v-model",
-                                  value: _vm.form.title,
-                                  expression: "form.title"
+                                  value: _vm.addGoalForm.title,
+                                  expression: "addGoalForm.title"
                                 }
                               ],
                               staticClass: "form-control",
                               class: {
-                                "is-invalid": _vm.form.errors.has("title")
+                                "is-invalid": _vm.addGoalForm.errors.has(
+                                  "title"
+                                )
                               },
                               attrs: { type: "text", name: "title" },
-                              domProps: { value: _vm.form.title },
+                              domProps: { value: _vm.addGoalForm.title },
                               on: {
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
                                   }
                                   _vm.$set(
-                                    _vm.form,
+                                    _vm.addGoalForm,
                                     "title",
                                     $event.target.value
                                   )
@@ -54549,7 +54583,7 @@ var render = function() {
                             }),
                             _vm._v(" "),
                             _c("has-error", {
-                              attrs: { form: _vm.form, field: "title" }
+                              attrs: { form: _vm.addGoalForm, field: "title" }
                             })
                           ],
                           1
@@ -54566,23 +54600,25 @@ var render = function() {
                                 {
                                   name: "model",
                                   rawName: "v-model",
-                                  value: _vm.form.description,
-                                  expression: "form.description"
+                                  value: _vm.addGoalForm.description,
+                                  expression: "addGoalForm.description"
                                 }
                               ],
                               staticClass: "form-control",
                               class: {
-                                "is-invalid": _vm.form.errors.has("description")
+                                "is-invalid": _vm.addGoalForm.errors.has(
+                                  "description"
+                                )
                               },
                               attrs: { type: "text", name: "description" },
-                              domProps: { value: _vm.form.description },
+                              domProps: { value: _vm.addGoalForm.description },
                               on: {
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
                                   }
                                   _vm.$set(
-                                    _vm.form,
+                                    _vm.addGoalForm,
                                     "description",
                                     $event.target.value
                                   )
@@ -54591,7 +54627,10 @@ var render = function() {
                             }),
                             _vm._v(" "),
                             _c("has-error", {
-                              attrs: { form: _vm.form, field: "description" }
+                              attrs: {
+                                form: _vm.addGoalForm,
+                                field: "description"
+                              }
                             })
                           ],
                           1
@@ -54608,25 +54647,25 @@ var render = function() {
                                 {
                                   name: "model",
                                   rawName: "v-model",
-                                  value: _vm.form.plannedstart,
-                                  expression: "form.plannedstart"
+                                  value: _vm.addGoalForm.plannedstart,
+                                  expression: "addGoalForm.plannedstart"
                                 }
                               ],
                               staticClass: "form-control",
                               class: {
-                                "is-invalid": _vm.form.errors.has(
+                                "is-invalid": _vm.addGoalForm.errors.has(
                                   "plannedststart"
                                 )
                               },
                               attrs: { type: "date", name: "startDate" },
-                              domProps: { value: _vm.form.plannedstart },
+                              domProps: { value: _vm.addGoalForm.plannedstart },
                               on: {
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
                                   }
                                   _vm.$set(
-                                    _vm.form,
+                                    _vm.addGoalForm,
                                     "plannedstart",
                                     $event.target.value
                                   )
@@ -54635,7 +54674,10 @@ var render = function() {
                             }),
                             _vm._v(" "),
                             _c("has-error", {
-                              attrs: { form: _vm.form, field: "plannedstart" }
+                              attrs: {
+                                form: _vm.addGoalForm,
+                                field: "plannedstart"
+                              }
                             })
                           ],
                           1
@@ -54652,23 +54694,25 @@ var render = function() {
                                 {
                                   name: "model",
                                   rawName: "v-model",
-                                  value: _vm.form.plannedend,
-                                  expression: "form.plannedend"
+                                  value: _vm.addGoalForm.plannedend,
+                                  expression: "addGoalForm.plannedend"
                                 }
                               ],
                               staticClass: "form-control",
                               class: {
-                                "is-invalid": _vm.form.errors.has("plannedend")
+                                "is-invalid": _vm.addGoalForm.errors.has(
+                                  "plannedend"
+                                )
                               },
                               attrs: { type: "date", name: "endDate" },
-                              domProps: { value: _vm.form.plannedend },
+                              domProps: { value: _vm.addGoalForm.plannedend },
                               on: {
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
                                   }
                                   _vm.$set(
-                                    _vm.form,
+                                    _vm.addGoalForm,
                                     "plannedend",
                                     $event.target.value
                                   )
@@ -54677,7 +54721,10 @@ var render = function() {
                             }),
                             _vm._v(" "),
                             _c("has-error", {
-                              attrs: { form: _vm.form, field: "plannedend" }
+                              attrs: {
+                                form: _vm.addGoalForm,
+                                field: "plannedend"
+                              }
                             })
                           ],
                           1
@@ -54694,14 +54741,16 @@ var render = function() {
                                 {
                                   name: "model",
                                   rawName: "v-model",
-                                  value: _vm.form.priority,
-                                  expression: "form.priority"
+                                  value: _vm.addGoalForm.priority,
+                                  expression: "addGoalForm.priority"
                                 }
                               ],
                               staticClass:
                                 "form-control custom-range custom-range-warning form-control",
                               class: {
-                                "is-invalid": _vm.form.errors.has("priority")
+                                "is-invalid": _vm.addGoalForm.errors.has(
+                                  "priority"
+                                )
                               },
                               attrs: {
                                 type: "range",
@@ -54712,11 +54761,11 @@ var render = function() {
                                 oninput:
                                   "outputPriority.value = inputPriority.value"
                               },
-                              domProps: { value: _vm.form.priority },
+                              domProps: { value: _vm.addGoalForm.priority },
                               on: {
                                 __r: function($event) {
                                   return _vm.$set(
-                                    _vm.form,
+                                    _vm.addGoalForm,
                                     "priority",
                                     $event.target.value
                                   )
@@ -54727,7 +54776,10 @@ var render = function() {
                             _vm._m(1),
                             _vm._v(" "),
                             _c("has-error", {
-                              attrs: { form: _vm.form, field: "priority" }
+                              attrs: {
+                                form: _vm.addGoalForm,
+                                field: "priority"
+                              }
                             })
                           ],
                           1
@@ -54744,23 +54796,23 @@ var render = function() {
                                 {
                                   name: "model",
                                   rawName: "v-model",
-                                  value: _vm.form.term,
-                                  expression: "form.term"
+                                  value: _vm.addGoalForm.term,
+                                  expression: "addGoalForm.term"
                                 }
                               ],
                               staticClass: "form-control",
                               class: {
-                                "is-invalid": _vm.form.errors.has("term")
+                                "is-invalid": _vm.addGoalForm.errors.has("term")
                               },
                               attrs: { type: "text", name: "term" },
-                              domProps: { value: _vm.form.term },
+                              domProps: { value: _vm.addGoalForm.term },
                               on: {
                                 input: function($event) {
                                   if ($event.target.composing) {
                                     return
                                   }
                                   _vm.$set(
-                                    _vm.form,
+                                    _vm.addGoalForm,
                                     "term",
                                     $event.target.value
                                   )
@@ -54769,7 +54821,7 @@ var render = function() {
                             }),
                             _vm._v(" "),
                             _c("has-error", {
-                              attrs: { form: _vm.form, field: "term" }
+                              attrs: { form: _vm.addGoalForm, field: "term" }
                             })
                           ],
                           1
@@ -54879,287 +54931,321 @@ var render = function() {
     },
     [
       _c(
-        "div",
+        "form",
         {
-          staticClass: "modal-dialog modal-dialog-centered",
-          attrs: { role: "document" }
+          on: {
+            submit: function($event) {
+              $event.preventDefault()
+              return _vm.createTask($event)
+            }
+          }
         },
         [
-          _c("div", { staticClass: "modal-content" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "modal-body" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-md-12" }, [
-                  _c("form", { attrs: { role: "form" } }, [
-                    _c("div", { staticClass: "card-body" }, [
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c("label", [_vm._v("Task")]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.username,
-                                expression: "form.username"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.form.errors.has("username")
-                            },
-                            attrs: { type: "text", name: "username" },
-                            domProps: { value: _vm.form.username },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+          _vm._v("\n    @csrf\n  "),
+          _c(
+            "div",
+            {
+              staticClass: "modal-dialog modal-dialog-centered",
+              attrs: { role: "document" }
+            },
+            [
+              _c("div", { staticClass: "modal-content" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("div", { staticClass: "modal-body" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-md-12" }, [
+                      _c("div", { staticClass: "card-body" }, [
+                        _c(
+                          "div",
+                          { staticClass: "form-group" },
+                          [
+                            _c("label", [_vm._v("Task")]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.addTaskForm.title,
+                                  expression: "addTaskForm.title"
                                 }
-                                _vm.$set(
-                                  _vm.form,
-                                  "username",
-                                  $event.target.value
+                              ],
+                              staticClass: "form-control",
+                              class: {
+                                "is-invalid": _vm.addTaskForm.errors.has(
+                                  "title"
                                 )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.form, field: "username" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c("label", [_vm._v("A little note")]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.username,
-                                expression: "form.username"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.form.errors.has("username")
-                            },
-                            attrs: { type: "text", name: "username" },
-                            domProps: { value: _vm.form.username },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                              },
+                              attrs: { type: "text", name: "title" },
+                              domProps: { value: _vm.addTaskForm.title },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.addTaskForm,
+                                    "title",
+                                    $event.target.value
+                                  )
                                 }
-                                _vm.$set(
-                                  _vm.form,
-                                  "username",
-                                  $event.target.value
-                                )
                               }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.form, field: "username" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c("label", [_vm._v("Start Date (Not necessary)")]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.username,
-                                expression: "form.username"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.form.errors.has("username")
-                            },
-                            attrs: { type: "text", name: "username" },
-                            domProps: { value: _vm.form.username },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                            }),
+                            _vm._v(" "),
+                            _c("has-error", {
+                              attrs: { form: _vm.addTaskForm, field: "title" }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "form-group" },
+                          [
+                            _c("label", [_vm._v("Task Description")]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.addTaskForm.description,
+                                  expression: "addTaskForm.description"
                                 }
-                                _vm.$set(
-                                  _vm.form,
-                                  "username",
-                                  $event.target.value
+                              ],
+                              staticClass: "form-control",
+                              class: {
+                                "is-invalid": _vm.addTaskForm.errors.has(
+                                  "description"
                                 )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.form, field: "username" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c("label", [_vm._v("End Date (Not necessary)")]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.username,
-                                expression: "form.username"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.form.errors.has("username")
-                            },
-                            attrs: { type: "text", name: "userName" },
-                            domProps: { value: _vm.form.username },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                              },
+                              attrs: { type: "text", name: "description" },
+                              domProps: { value: _vm.addTaskForm.description },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.addTaskForm,
+                                    "description",
+                                    $event.target.value
+                                  )
                                 }
-                                _vm.$set(
-                                  _vm.form,
-                                  "username",
-                                  $event.target.value
-                                )
                               }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.form, field: "username" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c("label", [_vm._v("Priority (Low ➡ High)")]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.priority,
-                                expression: "form.priority"
+                            }),
+                            _vm._v(" "),
+                            _c("has-error", {
+                              attrs: {
+                                form: _vm.addTaskForm,
+                                field: "description"
                               }
-                            ],
-                            staticClass:
-                              "form-control custom-range custom-range-warning form-control",
-                            class: {
-                              "is-invalid": _vm.form.errors.has("priority")
-                            },
-                            attrs: {
-                              type: "range",
-                              name: "inputPriority",
-                              min: "0",
-                              max: "10",
-                              id: "priority",
-                              oninput:
-                                "outputPriority.value = inputPriority.value"
-                            },
-                            domProps: { value: _vm.form.priority },
-                            on: {
-                              __r: function($event) {
-                                return _vm.$set(
-                                  _vm.form,
-                                  "priority",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _vm._m(1),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.form, field: "priority" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-group" },
-                        [
-                          _c("label", [_vm._v("Term")]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.username,
-                                expression: "form.username"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.form.errors.has("username")
-                            },
-                            attrs: { type: "text", name: "username" },
-                            domProps: { value: _vm.form.username },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "form-group" },
+                          [
+                            _c("label", [_vm._v("Start Date (Not necessary)")]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.addTaskForm.plannedstart,
+                                  expression: "addTaskForm.plannedstart"
                                 }
-                                _vm.$set(
-                                  _vm.form,
-                                  "username",
-                                  $event.target.value
+                              ],
+                              staticClass: "form-control",
+                              class: {
+                                "is-invalid": _vm.addTaskForm.errors.has(
+                                  "plannedststart"
                                 )
+                              },
+                              attrs: { type: "date", name: "startDate" },
+                              domProps: { value: _vm.addTaskForm.plannedstart },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.addTaskForm,
+                                    "plannedstart",
+                                    $event.target.value
+                                  )
+                                }
                               }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("has-error", {
-                            attrs: { form: _vm.form, field: "username" }
-                          })
-                        ],
-                        1
-                      )
+                            }),
+                            _vm._v(" "),
+                            _c("has-error", {
+                              attrs: {
+                                form: _vm.addTaskForm,
+                                field: "plannedstart"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "form-group" },
+                          [
+                            _c("label", [_vm._v("End Date (Not necessary)")]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.addTaskForm.plannedend,
+                                  expression: "addTaskForm.plannedend"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              class: {
+                                "is-invalid": _vm.addTaskForm.errors.has(
+                                  "plannedend"
+                                )
+                              },
+                              attrs: { type: "date", name: "endDate" },
+                              domProps: { value: _vm.addTaskForm.plannedend },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.addTaskForm,
+                                    "plannedend",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("has-error", {
+                              attrs: {
+                                form: _vm.addTaskForm,
+                                field: "plannedend"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "form-group" },
+                          [
+                            _c("label", [_vm._v("Priority (Low ➡ High)")]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.addTaskForm.priority,
+                                  expression: "addTaskForm.priority"
+                                }
+                              ],
+                              staticClass:
+                                "form-control custom-range custom-range-warning form-control",
+                              class: {
+                                "is-invalid": _vm.addTaskForm.errors.has(
+                                  "priority"
+                                )
+                              },
+                              attrs: {
+                                type: "range",
+                                name: "inputPriority",
+                                min: "0",
+                                max: "10",
+                                id: "priority",
+                                oninput:
+                                  "outputPriority.value = inputPriority.value"
+                              },
+                              domProps: { value: _vm.addTaskForm.priority },
+                              on: {
+                                __r: function($event) {
+                                  return _vm.$set(
+                                    _vm.addTaskForm,
+                                    "priority",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _vm._m(1),
+                            _vm._v(" "),
+                            _c("has-error", {
+                              attrs: {
+                                form: _vm.addTaskForm,
+                                field: "priority"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "form-group" },
+                          [
+                            _c("label", [_vm._v("Term")]),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.addTaskForm.term,
+                                  expression: "addTaskForm.term"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              class: {
+                                "is-invalid": _vm.addTaskForm.errors.has("term")
+                              },
+                              attrs: { type: "text", name: "term" },
+                              domProps: { value: _vm.addTaskForm.term },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.addTaskForm,
+                                    "term",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("has-error", {
+                              attrs: { form: _vm.addTaskForm, field: "term" }
+                            })
+                          ],
+                          1
+                        )
+                      ])
                     ])
                   ])
-                ])
+                ]),
+                _vm._v(" "),
+                _vm._m(2)
               ])
-            ]),
-            _vm._v(" "),
-            _vm._m(2)
-          ])
+            ]
+          )
         ]
       )
     ]
@@ -55174,7 +55260,7 @@ var staticRenderFns = [
       _c(
         "h5",
         { staticClass: "modal-title", attrs: { id: "addTaskModalLabel" } },
-        [_vm._v("Add a new task to this goal")]
+        [_vm._v("Add a Task to this Goal")]
       ),
       _vm._v(" "),
       _c(

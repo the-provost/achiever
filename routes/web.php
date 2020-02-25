@@ -19,7 +19,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resources([
-    'goal'=>'GoalController'
+    'goal'=>'GoalController',
+    'task'=>'TaskController'
 ]);
 Route::get('{path}', 'HomeController@index')->where(['path', '([A-z\d\-\/_.]+)?', 'path']);
 

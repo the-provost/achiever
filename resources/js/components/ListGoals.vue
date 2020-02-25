@@ -241,7 +241,17 @@
             return{
               goals: {}, 
               // goals object so curly brackets
-              form: new Form({
+              tasks: {}, 
+              // tasks object so curly brackets
+              addGoalForm: new Form({
+                    title:'',
+                    description:'',
+                    plannedstart:'',
+                    plannedend:'',
+                    term:'',
+                    priority:''
+                }),
+                addTaskForm: new Form({
                     title:'',
                     description:'',
                     plannedstart:'',
@@ -257,13 +267,23 @@
             // funtion ({data}) that stores the axios data into a goals object here 
           },
           createGoal(){
-            this.form.post('goal');
+            this.addGoalForm.post('goal');
           },
+          loadTasks(){
+            axios.get("task").then(({data}) => (this.tasks = data));
+            // funtion ({data}) that stores the axios data into a taskss object here 
+          },
+          createTasks(){
+            this.addTaskForm.post('task');
+          }
         },
         mounted() {
             this.loadGoals();
             // calling the method to load all goals from table
             console.log('Loading Goals...');
+            this.loadTasks();
+            // calling the method to load all tasks from table
+            console.log('Loading Tasks...');
         }
     }
 </script>

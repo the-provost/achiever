@@ -19,39 +19,39 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label>Goal</label>
-                        <input v-model="form.title" type="text" name="title" class="form-control" :class="{ 'is-invalid': form.errors.has('title') }">
-                        <has-error :form="form" field="title"></has-error>
+                        <input v-model="addGoalForm.title" type="text" name="title" class="form-control" :class="{ 'is-invalid': addGoalForm.errors.has('title') }">
+                        <has-error :form="addGoalForm" field="title"></has-error>
                    </div>
 
                     <div class="form-group">
                         <label>A little note</label>
-                        <input v-model="form.description" type="text" name="description" class="form-control" :class="{ 'is-invalid': form.errors.has('description') }">
-                        <has-error :form="form" field="description"></has-error>
+                        <input v-model="addGoalForm.description" type="text" name="description" class="form-control" :class="{ 'is-invalid': addGoalForm.errors.has('description') }">
+                        <has-error :form="addGoalForm" field="description"></has-error>
                    </div>
 
                     <div class="form-group">
                         <label>Start Date (Not necessary)</label>
-                        <input v-model="form.plannedstart" type="date" name="startDate" class="form-control" :class="{ 'is-invalid': form.errors.has('plannedststart') }">
-                        <has-error :form="form" field="plannedstart"></has-error>
+                        <input v-model="addGoalForm.plannedstart" type="date" name="startDate" class="form-control" :class="{ 'is-invalid': addGoalForm.errors.has('plannedststart') }">
+                        <has-error :form="addGoalForm" field="plannedstart"></has-error>
                    </div>
 
                     <div class="form-group">
                         <label>End Date (Not necessary)</label>
-                        <input v-model="form.plannedend" type="date" name="endDate" class="form-control" :class="{ 'is-invalid': form.errors.has('plannedend') }">
-                        <has-error :form="form" field="plannedend"></has-error>
+                        <input v-model="addGoalForm.plannedend" type="date" name="endDate" class="form-control" :class="{ 'is-invalid': addGoalForm.errors.has('plannedend') }">
+                        <has-error :form="addGoalForm" field="plannedend"></has-error>
                    </div>
 
                     <div class="form-group">
                         <label>Priority (Low ➡ High)</label>
-                        <input v-model="form.priority" type="range" name="inputPriority" class="form-control custom-range custom-range-warning form-control" min="0" max="10" id="priority" oninput="outputPriority.value = inputPriority.value" :class="{ 'is-invalid': form.errors.has('priority') }">
+                        <input v-model="addGoalForm.priority" type="range" name="inputPriority" class="form-control custom-range custom-range-warning form-control" min="0" max="10" id="priority" oninput="outputPriority.value = inputPriority.value" :class="{ 'is-invalid': addGoalForm.errors.has('priority') }">
                         <span class="badge badge-warning"><output name="outputPriority" id="outputPriority"></output></span>
-                        <has-error :form="form" field="priority"></has-error>
+                        <has-error :form="addGoalForm" field="priority"></has-error>
                    </div>
 
                     <div class="form-group">
                         <label>Term</label>
-                        <input v-model="form.term" type="text" name="term" class="form-control" :class="{ 'is-invalid': form.errors.has('term') }">
-                        <has-error :form="form" field="term"></has-error>
+                        <input v-model="addGoalForm.term" type="text" name="term" class="form-control" :class="{ 'is-invalid': addGoalForm.errors.has('term') }">
+                        <has-error :form="addGoalForm" field="term"></has-error>
                    </div>
 
                 </div>
@@ -76,7 +76,7 @@
      export default {
         data (){
             return{
-                form: new Form({
+                addGoalForm: new Form({
                     title:'',
                     description:'',
                     plannedstart:'',
@@ -88,7 +88,7 @@
         },
         methods: {
           createGoal(){
-            this.form.post('goal');
+            this.addGoalForm.post('goal');
           }
         },
         mounted() {
