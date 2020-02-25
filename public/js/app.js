@@ -23046,7 +23046,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -79813,9 +79812,9 @@ var render = function() {
                                     _vm._v(" "),
                                     _c("p", { staticClass: "card-text" }, [
                                       _vm._v(
-                                        "\n             " +
+                                        "\r\n             " +
                                           _vm._s(goal.description) +
-                                          "\n           "
+                                          "\r\n           "
                                       )
                                     ]),
                                     _vm._v(" "),
@@ -79868,11 +79867,7 @@ var render = function() {
                                                       },
                                                       attrs: { type: "button" }
                                                     },
-                                                    [
-                                                      _vm._v(
-                                                        "\n             Tasks"
-                                                      )
-                                                    ]
+                                                    [_vm._v("Tasks")]
                                                   ),
                                                   _vm._v(" "),
                                                   _vm._m(3, true),
@@ -80369,7 +80364,7 @@ var staticRenderFns = [
           },
           [
             _c("div", { staticClass: "card-body" }, [
-              _vm._v("TASKS\n       "),
+              _vm._v("TASKS\r\n       "),
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-md-12" }, [
                   _c("h5", { staticClass: "card-title" }, [
@@ -80378,7 +80373,7 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("p", { staticClass: "card-text" }, [
                     _vm._v(
-                      "\n             Some quick example text to build on the card title and make up the bulk of the card's\n             content.\n           "
+                      "\r\n             Some quick example text to build on the card title and make up the bulk of the card's\r\n             content.\r\n           "
                     )
                   ]),
                   _vm._v(" "),

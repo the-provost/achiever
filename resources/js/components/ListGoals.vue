@@ -92,11 +92,10 @@
            <div class="col-md-12 d-flex">
            <div class="col-md-2 d-flex">
              <div class="btn-group">
-           <button type="button" class="btn aor" style="width:100%; ">
-             Tasks</button>
+           <button type="button" class="btn aor" style="width:100%;">Tasks</button>
            <button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
            <i class="fas fa-plus"></i></button>
-           <button type="button" class="btn aor" v-on:click="isHidden = !isHidden"  style="width:100%; ">
+           <button type="button" class="btn aor" v-on:click="isHidden = !isHidden" style="width:100%; ">
            <i class="fas fa-list"></i></button>
            </div>
            </div>
