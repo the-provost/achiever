@@ -72,7 +72,7 @@ class TaskController extends Controller
             "term" => $request->get('term'),
             "priority" => $request->get('priority'),
             "type"=> "Task",
-            "task_id"=>"1"
+            "task_id"=>$request->get('taskid')
         ]);
 
     }

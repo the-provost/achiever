@@ -18,6 +18,7 @@
            
                 <div class="card-body">
                     <div class="form-group">
+                    		<input type="hidden" name="taskid" v-model="addTaskForm.taskid">
                         <label>Task</label>
                         <input v-model="addTaskForm.title" type="text" name="title" class="form-control" :class="{ 'is-invalid': addTaskForm.errors.has('title') }">
                         <has-error :form="addTaskForm" field="title"></has-error>
@@ -74,6 +75,11 @@
 
 <script>
      export default {
+     
+     		props: {
+     			id: Number
+     		},
+     		
         data (){
             return{
                 addTaskForm: new Form({
@@ -82,12 +88,14 @@
                     plannedstart:'',
                     plannedend:'',
                     term:'',
-                    priority:''
+                    priority:'',
+                    taskid: null
                 })
             }
         },
         methods: {
           createTask(){
+          	this.addTaskForm.taskid=this.id;
             this.addTaskForm.post('task');
           }
         },

@@ -17,7 +17,7 @@
       </section>
 
       <add-goal></add-goal>
-      <add-task></add-task>
+      <add-task :id="this.id.id"></add-task>
 
     <!-- Main content -->
     <section class="content justify-content-center align-center">
@@ -93,7 +93,7 @@
            	<div class="col-md-2 d-flex">
              <div class="btn-group">
            		<button type="button" class="btn aor" style="width:100%;">Tasks</button>
-           		<button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; ">
+           		<button type="button" class="btn aor" data-toggle="modal" data-target="#addTaskModal" style="width:100%; " @click="setGoalId(goal.id)">
            		<i class="fas fa-plus"></i></button>
            		<button type="button" class="btn aor" @click="showTasks(goal.id)" style="width:100%; ">
            			<i class="fas fa-list"></i>
@@ -243,9 +243,9 @@
             return{
               goals: {}, 
               // goals object so curly brackets
-              tasks: {}, 
+              tasks: [], 
               // tasks object so curly brackets
-              selectedTasks: {},
+              selectedTasks: [],
               addGoalForm: new Form({
                     title:'',
                     description:'',
@@ -260,10 +260,11 @@
                     plannedstart:'',
                     plannedend:'',
                     term:'',
-                    priority:''
+                    priority:'',
+                    taskid:''
                 }),
                
-                id: null
+                id:{id: null}
             }
         },
         methods: {
@@ -282,25 +283,35 @@
             // funtion ({data}) that stores the axios data into a taskss object here 
           },
           loadSelectedTasks(id){
-            for 
-            axios.get("task", {params:{id: id}}).then(({data}) => (this.selectedTasks = data));
+            return axios.get("task", {params:{id:id}}).then(({data}) => {this.selectedTasks = data;});
+            
             // funtion ({data}) that stores the axios data into a taskss object here 
           },
           createTasks(){
             this.addTaskForm.post('task');
           },
          
-          showTasks: function(id) {
+          async showTasks(id) {
             // this.id=event.srcElement.id;
-            this.loadSelectedTasks(id);
-            var f=document.getElementById(id);
+            await this.loadSelectedTasks(id);
+            var f=document.querySelectorAll(".taskrow");
+            for(var i=0;i<f.length;i++){
+            	console.log(f[i].id);
+            	if(f[i].id==id && f[i].hidden==true)
+            		f[i].hidden=false;
+            	else if(f[i].id==id && f[i].hidden==false)
+            		f[i].hidden=true;
+            }
+            /*console.log(rows);
 		        if (f.hidden == true) {
             	f.hidden = false;
             } 
             else {
 		      		f.hidden = true;
-		        }
-          }
+		        }*/
+          },
+          
+          setGoalId(gid){this.id.id=gid;console.log(this.id.id)}
 
 //           showTasks()
 // {
