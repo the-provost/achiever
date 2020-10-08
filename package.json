@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@editorjs/editorjs": "^2.18.0",
         "@fortawesome/fontawesome-free": "^5.12.1",
         "admin-lte": "^3.0.2",
         "moment": "^2.24.0",
@@ -37,6 +38,7 @@
         "vue-pdf": "^4.0.7",
         "vue-progressbar": "^0.7.5",
         "vue-router": "^3.1.5",
-        "vue-select": "^3.4.0"
+        "vue-select": "^3.4.0",
+        "vue2-editor": "^2.10.2"
     }
 }
