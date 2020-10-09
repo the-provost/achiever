@@ -26,6 +26,8 @@
     "dependencies": {
         "@editorjs/editorjs": "^2.18.0",
         "@fortawesome/fontawesome-free": "^5.12.1",
+        "@fullcalendar/daygrid": "^5.3.2",
+        "@fullcalendar/vue": "^5.3.1",
         "admin-lte": "^3.0.2",
         "es6-promise": "^4.2.8",
         "moment": "^2.24.0",
