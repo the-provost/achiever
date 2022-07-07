@@ -30,7 +30,7 @@
         "@fullcalendar/vue": "^5.3.1",
         "admin-lte": "^3.0.2",
         "es6-promise": "^4.2.8",
-        "moment": "^2.24.0",
+        "moment": "^2.29.4",
         "sweetalert2": "^8.19.0",
         "tempusdominus-bootstrap-4": "^5.1.2",
         "toastr": "^2.1.4",
